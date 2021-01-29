@@ -62,9 +62,17 @@ public class PlayerInput : MonoBehaviour
         if (Input_accionP1.ReadValue<float>()==1&&CanAccionP1) {
             CanAccionP1 = false;
             //P1Script.rama.SetActive(true);
+            print("ataque rama/piedra");
             Invoke("activarAccionP1",coolDownAcciones);
         }
-        
+        if (Input_accionP2.ReadValue<float>() == 1 && CanAccionP2)
+        {
+            CanAccionP2 = false;
+            //activar ataque mágico;
+            print("ataque magico");
+            Invoke("activarAccionP2", coolDownAcciones);
+        }
+
         ///
 
 
@@ -74,7 +82,11 @@ public class PlayerInput : MonoBehaviour
         //P1Script.rama.SetActive(false);
         CanAccionP1 = true;
     }
-
+    void activarAccionP2()
+    {
+        //P1Script.rama.SetActive(false);
+        CanAccionP2 = true;
+    }
     //rotar personajes dependiendo de la diercción de movimiento
     /*void rotatePersonaje(GameObject player, Vector3 moveValues) {
         if (moveValues == Vector3.up)
