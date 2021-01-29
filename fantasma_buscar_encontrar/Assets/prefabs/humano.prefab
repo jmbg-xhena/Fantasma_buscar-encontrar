@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4054292434034152875}
   - component: {fileID: 4054292434034152874}
-  - component: {fileID: 4054292434034152853}
   - component: {fileID: 4054292434034152852}
   - component: {fileID: 4054292434034152854}
+  - component: {fileID: 812063328}
   m_Layer: 0
   m_Name: humano
   m_TagString: humano
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4054292434034152873}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.7, y: -3.84, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -73,8 +73,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0, g: 0.11260891, b: 1, a: 1}
+  m_Sprite: {fileID: -5427824590487121644, guid: a98e3bb2342418a43a3a4898648947d4,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -84,22 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &4054292434034152853
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4054292434034152873}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.08
 --- !u!50 &4054292434034152852
 Rigidbody2D:
   serializedVersion: 4
@@ -120,7 +105,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &4054292434034152854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,3 +118,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d41c65d16ca3e748a969efe19db9208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  no_llaves: 0
+  no_paginas: 0
+--- !u!70 &812063328
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4054292434034152873}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.85714287, y: 1.6666666}
+  m_Direction: 0
