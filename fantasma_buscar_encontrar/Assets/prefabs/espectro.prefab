@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6571122175963075931}
   - component: {fileID: 8908836728629133669}
   m_Layer: 0
-  m_Name: "esp\xEDritu"
+  m_Name: espectro
   m_TagString: espectro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,13 +71,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6879027162003712070, guid: c6495c34ee620eb41bf661020072bed2,
+  m_Sprite: {fileID: 6879027162003712070, guid: d3f994e029248444483c5c629a7333b9,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 1.2380953, y: 2.6190476}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
