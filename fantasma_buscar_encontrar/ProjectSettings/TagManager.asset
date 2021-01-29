@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - trampa
+  - humano
+  - espectro
+  - lobo
   layers:
   - Default
   - TransparentFX
