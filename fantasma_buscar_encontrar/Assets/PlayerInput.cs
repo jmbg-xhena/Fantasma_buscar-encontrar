@@ -51,17 +51,17 @@ public class PlayerInput : MonoBehaviour
             //moverse humano
         moveValuesP1 = new Vector3(Input_moveP1.ReadValue<Vector2>().x, Input_moveP1.ReadValue<Vector2>().y, 0f);
         P1.transform.position += moveValuesP1*velocidadMovimiento;
-        rotatePersonaje(P1, moveValuesP1);
+        //rotatePersonaje(P1, moveValuesP1);
 
             //moverse fantasma
         moveValuesP2 = new Vector3(Input_moveP2.ReadValue<Vector2>().x, Input_moveP2.ReadValue<Vector2>().y, 0f);
         P2.transform.position += moveValuesP2 * velocidadMovimiento;
-        rotatePersonaje(P2, moveValuesP2);
+        //rotatePersonaje(P2, moveValuesP2);
 
             //destruir trampas
         if (Input_accionP1.ReadValue<float>()==1&&CanAccionP1) {
             CanAccionP1 = false;
-            P1Script.rama.SetActive(true);
+            //P1Script.rama.SetActive(true);
             Invoke("activarAccionP1",coolDownAcciones);
         }
         
@@ -71,12 +71,12 @@ public class PlayerInput : MonoBehaviour
     }
 
     void activarAccionP1() {
-        P1Script.rama.SetActive(false);
+        //P1Script.rama.SetActive(false);
         CanAccionP1 = true;
     }
 
     //rotar personajes dependiendo de la diercción de movimiento
-    void rotatePersonaje(GameObject player, Vector3 moveValues) {
+    /*void rotatePersonaje(GameObject player, Vector3 moveValues) {
         if (moveValues == Vector3.up)
         {
             player.transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -109,5 +109,5 @@ public class PlayerInput : MonoBehaviour
         {
             player.transform.rotation = Quaternion.Euler(0, 0, -135);
         }
-    }
+    }*/
 }

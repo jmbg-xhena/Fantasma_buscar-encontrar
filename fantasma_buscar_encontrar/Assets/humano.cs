@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class humano : MonoBehaviour
 {
-    public GameObject rama;
 
     // Start is called before the first frame update
     void Start()
     {
-        rama.SetActive(false);
+
     }
 
     // Update is called once per frame
