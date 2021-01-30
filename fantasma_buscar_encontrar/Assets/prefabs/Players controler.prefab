@@ -1,0 +1,178 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6811974312754972988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6811974312754972990}
+  - component: {fileID: 6811974312754972991}
+  m_Layer: 0
+  m_Name: Players controler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6811974312754972990
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6811974312754972988}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.49, y: -3.84, z: -0.48457032}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6811974312754972991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6811974312754972988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06d582bef0fe36045a8991158c8da313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  P1: {fileID: 0}
+  P2: {fileID: 0}
+  coolDownAcciones: 0.2
+  Input_moveP1:
+    m_Name: Input_move P1
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 6b1e2ebe-4dff-48ae-962c-1649d65fa233
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: move
+      m_Id: ceb377b3-10aa-4962-9b66-5914c39a4a6f
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input_move P1
+      m_Flags: 4
+    - m_Name: up
+      m_Id: 53e0d470-a250-46b0-b126-db63583ee799
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input_move P1
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 57135b99-03c0-4528-82d4-30bfe9f971da
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input_move P1
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 53a01da3-b309-475d-86d5-be5d6ae708e1
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input_move P1
+      m_Flags: 8
+    - m_Name: right
+      m_Id: 7c80afb3-4da5-430c-9a84-1babdcd692ac
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input_move P1
+      m_Flags: 8
+  Input_accionP1:
+    m_Name: Input_accion P1
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: cded2b1f-90b2-46c2-bdc5-126e5d22fc20
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 37693e6f-7a58-4e9e-a15d-67df019e3f83
+      m_Path: <Keyboard>/space
+      m_Interactions: Tap(duration=0.1)
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input_accion P1
+      m_Flags: 0
+  moveValuesP1: {x: 0, y: 0, z: 0}
+  Input_moveP2:
+    m_Name: Input_move P2
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 6fd9b03b-f0cf-4fab-984c-0552a26deab2
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: move
+      m_Id: 4fadbb6c-f1ac-41d6-ad76-e8900b4e8a72
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input_move P2
+      m_Flags: 4
+    - m_Name: up
+      m_Id: b4f4d0f9-306e-4ade-ac53-80bfcbe12662
+      m_Path: <Keyboard>/upArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input_move P2
+      m_Flags: 8
+    - m_Name: down
+      m_Id: de654be2-6fc9-4618-a407-8965e01559e9
+      m_Path: <Keyboard>/downArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input_move P2
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 30292b1c-975d-4a00-950a-334f9ec0c6c9
+      m_Path: <Keyboard>/leftArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input_move P2
+      m_Flags: 8
+    - m_Name: right
+      m_Id: 38c0740b-deae-489f-b214-7db6767f21f2
+      m_Path: <Keyboard>/rightArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input_move P2
+      m_Flags: 8
+  Input_accionP2:
+    m_Name: Input_accion P2
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 125ee959-09b2-4e86-bec3-9f893b3d7d4c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 1996ed56-05b5-47c1-93bf-18a27b9114c6
+      m_Path: <Keyboard>/rightShift
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input_accion P2
+      m_Flags: 0
+  velocidadMovimiento: 0.02

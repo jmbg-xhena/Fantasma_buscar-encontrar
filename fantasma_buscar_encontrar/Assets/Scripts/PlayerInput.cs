@@ -17,7 +17,7 @@ public class PlayerInput : MonoBehaviour
     public InputAction Input_accionP2;
     private bool CanAccionP2;
     private Vector3 moveValuesP2;
-    public float velocidadMovimiento=0.1f;
+    public float velocidadMovimiento = 1.0f;
 
     private Animator P1anim;
     private Animator P2anim;
@@ -55,12 +55,12 @@ public class PlayerInput : MonoBehaviour
         ///inputs
             //moverse humano
         moveValuesP1 = new Vector3(Input_moveP1.ReadValue<Vector2>().x, Input_moveP1.ReadValue<Vector2>().y, 0f);
-        P1.transform.position += moveValuesP1*velocidadMovimiento;
+        P1.transform.position += moveValuesP1 * (velocidadMovimiento * Time.deltaTime);
         rotatePersonaje(P1anim, moveValuesP1);
 
             //moverse fantasma
         moveValuesP2 = new Vector3(Input_moveP2.ReadValue<Vector2>().x, Input_moveP2.ReadValue<Vector2>().y, 0f);
-        P2.transform.position += moveValuesP2 * velocidadMovimiento;
+        P2.transform.position += moveValuesP2 * (velocidadMovimiento * Time.deltaTime);
         rotatePersonaje(P2anim, moveValuesP2);
 
             //destruir trampas
