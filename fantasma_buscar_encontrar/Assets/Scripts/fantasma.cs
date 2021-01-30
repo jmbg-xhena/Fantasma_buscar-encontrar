@@ -26,7 +26,7 @@ public class fantasma : MonoBehaviour
         if (collision.transform.CompareTag("espectro"))
         {
             print("fantasma game over");
-            collision.gameObject.GetComponent<Animator>().SetTrigger("consuming");
+            collision.gameObject.GetComponent<Animator>().SetTrigger("Consuming");
         }
     }
 }
