@@ -8,6 +8,7 @@ TagManager:
   - humano
   - espectro
   - lobo
+  - aron
   layers:
   - Default
   - TransparentFX
