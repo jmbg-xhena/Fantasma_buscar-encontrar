@@ -146,8 +146,8 @@ GameObject:
   - component: {fileID: 403681235}
   - component: {fileID: 403681238}
   m_Layer: 0
-  m_Name: fantasma
-  m_TagString: Untagged
+  m_Name: Aron
+  m_TagString: Aron
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
