@@ -10,6 +10,7 @@ TagManager:
   - lobo
   - Amelia
   - Aron
+  - arma_aron
   layers:
   - Default
   - TransparentFX

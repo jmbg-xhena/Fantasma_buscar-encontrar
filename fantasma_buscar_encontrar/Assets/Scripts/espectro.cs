@@ -21,12 +21,15 @@ public class espectro : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        t = 0;
+        if (collision.transform.CompareTag("Aron"))
+        {
+            t = 0;
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.transform.CompareTag("aron")) {
+        if (collision.transform.CompareTag("Aron")) {
             if (!chocando)
             {
                 print(transform.position.x-collision.transform.position.x);
@@ -48,16 +51,25 @@ public class espectro : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.CompareTag("aron"))
+        if (collision.transform.CompareTag("Aron"))
         {
-            chocando = true;
+            if (collision.gameObject.GetComponentInChildren<hitbox>().transform.CompareTag("arma_aron"))
+            {
+                Destroy(this.gameObject);
+            }
+            else
+            {
+                chocando = true;
+                gameObject.GetComponent<Animator>().SetBool("Consuming", true);
+            }
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.transform.CompareTag("aron"))
+        if (collision.transform.CompareTag("Aron"))
         {
             chocando = false;
+            gameObject.GetComponent<Animator>().SetBool("Consuming", false);
         }
     }
 }

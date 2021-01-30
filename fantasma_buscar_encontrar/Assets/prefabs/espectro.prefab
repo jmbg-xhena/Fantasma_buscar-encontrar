@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6571122175963075931}
   - component: {fileID: 8908836728629133669}
   - component: {fileID: 2026325622}
+  - component: {fileID: 8040678286099147805}
+  - component: {fileID: 2026325626}
   m_Layer: 0
   m_Name: espectro
   m_TagString: espectro
@@ -97,8 +99,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.62, y: 1.25}
-  m_Size: {x: 1.07, y: 2.77}
+  m_Offset: {x: -0.62, y: 2.13}
+  m_Size: {x: 1.07, y: 1.03}
   m_Direction: 0
 --- !u!95 &2026325622
 Animator:
@@ -119,3 +121,33 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &8040678286099147805
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6571122175963075925}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 2.5}
+  serializedVersion: 2
+  m_Radius: 5
+--- !u!114 &2026325626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6571122175963075925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627792efbcb376d4d90847b7683d4be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  t: 0
+  xScale: 0

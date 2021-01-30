@@ -5,6 +5,7 @@ using UnityEngine;
 public class fantasma : MonoBehaviour
 {
     private Animator anim;
+    public GameObject hbox;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,12 @@ public class fantasma : MonoBehaviour
 
     public void deactivateAtack() {
         anim.SetBool("IsAttacking", false);
+        hbox.SetActive(false);
+    }
+
+    public void activateHitbox()
+    {
+        hbox.SetActive(true);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -26,7 +33,6 @@ public class fantasma : MonoBehaviour
         if (collision.transform.CompareTag("espectro"))
         {
             print("fantasma game over");
-            collision.gameObject.GetComponent<Animator>().SetTrigger("consuming");
         }
     }
 }
