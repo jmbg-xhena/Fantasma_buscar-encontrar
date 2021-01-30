@@ -21,6 +21,7 @@ public class trampa : MonoBehaviour
     {
         if (collision.transform.CompareTag("humano"))
         {
+            gameObject.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.None;
             anim.SetBool("cerrar", true);
         }
     }

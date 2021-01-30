@@ -149,7 +149,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 111069106806735086}
@@ -227,7 +227,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 111069106806735086}
@@ -280,7 +280,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8574629494023677402}
@@ -333,7 +333,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8574629494023677402}
@@ -361,7 +361,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 4
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6589583546772736584}
@@ -389,7 +389,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 111069106806735086}
@@ -476,7 +476,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 111069106806735086}
@@ -504,7 +504,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8574629494023677402}
@@ -659,7 +659,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4701047475270416850}
@@ -712,7 +712,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 111069106806735086}
@@ -818,7 +818,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 4
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6589583546772736584}
@@ -911,7 +911,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 4
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6589583546772736584}
@@ -1025,7 +1025,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4701047475270416850}
@@ -1230,13 +1230,13 @@ AnimatorController:
   m_Name: Aron
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: SpeedY
+  - m_Name: SpeedX
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: SpeedX
+  - m_Name: SpeedY
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -1254,7 +1254,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: FacingTo
+  - m_Name: IsLookingAt
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -1350,7 +1350,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4701047475270416850}
@@ -1450,7 +1450,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8574629494023677402}
@@ -1505,7 +1505,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4701047475270416850}
@@ -1538,7 +1538,7 @@ AnimatorStateMachine:
     m_Position: {x: -20, y: 80, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6589583546772736584}
-    m_Position: {x: 210, y: 330, z: 0}
+    m_Position: {x: 380, y: 400, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8574629494023677402}
     m_Position: {x: -240, y: 340, z: 0}
@@ -1553,7 +1553,7 @@ AnimatorStateMachine:
     m_Position: {x: 890, y: 200, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3270476679815355059}
-    m_Position: {x: 420, y: 180, z: 0}
+    m_Position: {x: 420, y: 190, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7464983452268042270}
     m_Position: {x: 500, y: 720, z: 0}
@@ -1588,7 +1588,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4701047475270416850}
@@ -1616,7 +1616,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8574629494023677402}
@@ -1675,7 +1675,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4701047475270416850}
@@ -1728,7 +1728,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4701047475270416850}
@@ -1756,7 +1756,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 4
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6589583546772736584}
@@ -1877,7 +1877,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 4
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6589583546772736584}
@@ -1955,7 +1955,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 4
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6589583546772736584}
@@ -1991,7 +1991,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
   m_ExitTime: 0
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -2085,7 +2085,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 4
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6589583546772736584}
@@ -2113,7 +2113,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 111069106806735086}
@@ -2141,7 +2141,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8574629494023677402}
@@ -2200,7 +2200,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 111069106806735086}
@@ -2228,7 +2228,7 @@ AnimatorStateTransition:
     m_ConditionEvent: IsMoving
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: FacingTo
+    m_ConditionEvent: IsLookingAt
     m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8574629494023677402}

@@ -19,6 +19,9 @@ public class PlayerInput : MonoBehaviour
     private Vector3 moveValuesP2;
     public float velocidadMovimiento=0.1f;
 
+    private Animator P1anim;
+    private Animator P2anim;
+
     private void OnEnable()
     {
         Input_moveP1.Enable();
@@ -42,6 +45,8 @@ public class PlayerInput : MonoBehaviour
         CanAccionP2 = true;
         P1Script = P1.GetComponent<humano>();
         P2Script = P2.GetComponent<fantasma>();
+        P1anim = P1.GetComponent<Animator>();
+        P2anim = P2.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -51,23 +56,24 @@ public class PlayerInput : MonoBehaviour
             //moverse humano
         moveValuesP1 = new Vector3(Input_moveP1.ReadValue<Vector2>().x, Input_moveP1.ReadValue<Vector2>().y, 0f);
         P1.transform.position += moveValuesP1*velocidadMovimiento;
-        //rotatePersonaje(P1, moveValuesP1);
+        rotatePersonaje(P1anim, moveValuesP1);
 
             //moverse fantasma
         moveValuesP2 = new Vector3(Input_moveP2.ReadValue<Vector2>().x, Input_moveP2.ReadValue<Vector2>().y, 0f);
         P2.transform.position += moveValuesP2 * velocidadMovimiento;
-        //rotatePersonaje(P2, moveValuesP2);
+        rotatePersonaje(P2anim, moveValuesP2);
 
             //destruir trampas
         if (Input_accionP1.ReadValue<float>()==1&&CanAccionP1) {
             CanAccionP1 = false;
-            //P1Script.rama.SetActive(true);
+            P1anim.SetBool("IsAttacking", true);
             print("ataque rama/piedra");
             Invoke("activarAccionP1",coolDownAcciones);
         }
         if (Input_accionP2.ReadValue<float>() == 1 && CanAccionP2)
         {
             CanAccionP2 = false;
+            P2anim.SetBool("IsAttacking", true);
             //activar ataque mágico;
             print("ataque magico");
             Invoke("activarAccionP2", coolDownAcciones);
@@ -88,24 +94,34 @@ public class PlayerInput : MonoBehaviour
         CanAccionP2 = true;
     }
     //rotar personajes dependiendo de la diercción de movimiento
-    /*void rotatePersonaje(GameObject player, Vector3 moveValues) {
+    void rotatePersonaje(Animator anim, Vector3 moveValues) {
+        anim.SetFloat("SpeedX", moveValues.x);
+        anim.SetFloat("SpeedY", moveValues.y);
+        if (moveValues.x != 0 || moveValues.y != 0)
+        {
+            anim.SetBool("IsMoving", true);
+        }
+        else {
+            anim.SetBool("IsMoving", false);
+        }
+
         if (moveValues == Vector3.up)
         {
-            player.transform.rotation = Quaternion.Euler(0, 0, 0);
+            anim.SetInteger("IsLookingAt", 1);
         }
         if (moveValues == Vector3.down)
         {
-            player.transform.rotation = Quaternion.Euler(0, 0, 180);
+            anim.SetInteger("IsLookingAt", 3);
         }
         if (moveValues == Vector3.left)
         {
-            player.transform.rotation = Quaternion.Euler(0, 0, 90);
+            anim.SetInteger("IsLookingAt", 2);
         }
         if (moveValues == Vector3.right)
         {
-            player.transform.rotation = Quaternion.Euler(0, 0, -90);
+            anim.SetInteger("IsLookingAt", 4);
         }
-        if (moveValues.x>0 && moveValues.x < 1 && moveValues.y > 0 && moveValues.y < 1)
+        /*if (moveValues.x>0 && moveValues.x < 1 && moveValues.y > 0 && moveValues.y < 1)
         {
             player.transform.rotation = Quaternion.Euler(0, 0, -45);
         }
@@ -120,6 +136,6 @@ public class PlayerInput : MonoBehaviour
         if (moveValues.x > 0 && moveValues.x < 1 && moveValues.y < 0 && moveValues.y > -1)
         {
             player.transform.rotation = Quaternion.Euler(0, 0, -135);
-        }
-    }*/
+        }*/
+    }
 }
