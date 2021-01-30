@@ -6,6 +6,8 @@ public class humano : MonoBehaviour
     [Header("inventario")]
     public int no_llaves;
     public int no_paginas;
+    public bool stick = false;
+    public bool stone = false;
     [Header("animacion")]
     private Animator anim;
     // Start is called before the first frame update
@@ -27,7 +29,7 @@ public class humano : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.CompareTag("trampa"))
+        if (collision.transform.CompareTag("trampa") && stick == false)
         {
             print("humano game over");
         }
@@ -37,10 +39,20 @@ public class humano : MonoBehaviour
         }
     }
 
+    /*private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.CompareTag("stick"))
+        {
+            if()
+        }
+    }*/
+
+    /*
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.CompareTag("trampa")) {
             Destroy(collision.gameObject);
         }
     }
+    */
 }
