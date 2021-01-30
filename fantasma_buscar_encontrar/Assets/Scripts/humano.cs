@@ -10,6 +10,7 @@ public class humano : MonoBehaviour
     public bool stone = false;
     [Header("animacion")]
     private Animator anim;
+    public GameObject hbox;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,14 +26,28 @@ public class humano : MonoBehaviour
     public void deactivateAtack()
     {
         anim.SetBool("IsAttacking", false);
+        hbox.SetActive(false);
+    }
+
+    public void activateHitbox()
+    {
+        hbox.SetActive(true);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.CompareTag("trampa") && stick == false)
+        if (collision.transform.CompareTag("trampa"))
         {
-            print("humano game over");
+            if (stick == false)
+            {
+                print("humano game over");
+            }
+            else {
+                Destroy(collision.gameObject);
+            }
         }
+
+
         if (collision.transform.CompareTag("lobo"))
         {
             print("humano game over");
@@ -46,13 +61,4 @@ public class humano : MonoBehaviour
             if()
         }
     }*/
-
-    /*
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.transform.CompareTag("trampa")) {
-            Destroy(collision.gameObject);
-        }
-    }
-    */
 }

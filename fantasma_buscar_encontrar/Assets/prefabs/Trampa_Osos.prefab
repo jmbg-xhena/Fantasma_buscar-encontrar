@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 3101210498472065454}
   m_Layer: 0
   m_Name: Trampa_Osos
-  m_TagString: Untagged
+  m_TagString: trampa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

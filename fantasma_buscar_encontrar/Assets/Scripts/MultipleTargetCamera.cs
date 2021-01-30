@@ -21,8 +21,8 @@ public class MultipleTargetCamera : MonoBehaviour
 
     private void Start()
     {
-        targets.Add(GameObject.FindGameObjectWithTag("humano").transform);
-        targets.Add(GameObject.FindGameObjectWithTag("aron").transform);
+        targets.Add(GameObject.FindGameObjectWithTag("Amelia").transform);
+        targets.Add(GameObject.FindGameObjectWithTag("Aron").transform);
         cam = GetComponent<Camera>();
     }
 

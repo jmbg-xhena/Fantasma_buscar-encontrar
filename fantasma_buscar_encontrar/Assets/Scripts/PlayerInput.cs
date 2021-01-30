@@ -18,6 +18,8 @@ public class PlayerInput : MonoBehaviour
     private bool CanAccionP2;
     private Vector3 moveValuesP2;
     public float velocidadMovimiento = 1.0f;
+    private GameObject hitboxP1;
+    private GameObject hitboxP2;
 
     private Animator P1anim;
     private Animator P2anim;
@@ -43,10 +45,16 @@ public class PlayerInput : MonoBehaviour
     {
         CanAccionP1 = true;
         CanAccionP2 = true;
+        P1=GameObject.FindGameObjectWithTag("Amelia");
+        P2 = GameObject.FindGameObjectWithTag("Aron");
         P1Script = P1.GetComponent<humano>();
         P2Script = P2.GetComponent<fantasma>();
         P1anim = P1.GetComponent<Animator>();
         P2anim = P2.GetComponent<Animator>();
+        hitboxP1 = P1.GetComponentInChildren<hitbox>().gameObject;
+        hitboxP2 = P2.GetComponentInChildren<hitbox>().gameObject;
+        hitboxP1.SetActive(false);
+        hitboxP2.SetActive(false);
     }
 
     // Update is called once per frame
@@ -56,12 +64,12 @@ public class PlayerInput : MonoBehaviour
             //moverse humano
         moveValuesP1 = new Vector3(Input_moveP1.ReadValue<Vector2>().x, Input_moveP1.ReadValue<Vector2>().y, 0f);
         P1.transform.position += moveValuesP1 * (velocidadMovimiento * Time.deltaTime);
-        rotatePersonaje(P1anim, moveValuesP1);
+        rotatePersonaje(P1anim, moveValuesP1,hitboxP1);
 
             //moverse fantasma
         moveValuesP2 = new Vector3(Input_moveP2.ReadValue<Vector2>().x, Input_moveP2.ReadValue<Vector2>().y, 0f);
         P2.transform.position += moveValuesP2 * (velocidadMovimiento * Time.deltaTime);
-        rotatePersonaje(P2anim, moveValuesP2);
+        rotatePersonaje(P2anim, moveValuesP2,hitboxP2);
 
             //destruir trampas
         if (Input_accionP1.ReadValue<float>()==1&&CanAccionP1) {
@@ -93,8 +101,10 @@ public class PlayerInput : MonoBehaviour
         //P1Script.rama.SetActive(false);
         CanAccionP2 = true;
     }
+
+
     //rotar personajes dependiendo de la diercción de movimiento
-    void rotatePersonaje(Animator anim, Vector3 moveValues) {
+    void rotatePersonaje(Animator anim, Vector3 moveValues, GameObject hbox) {
         anim.SetFloat("SpeedX", moveValues.x);
         anim.SetFloat("SpeedY", moveValues.y);
         if (moveValues.x != 0 || moveValues.y != 0)
@@ -108,34 +118,38 @@ public class PlayerInput : MonoBehaviour
         if (moveValues == Vector3.up)
         {
             anim.SetInteger("IsLookingAt", 1);
+            hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 0f));
         }
         if (moveValues == Vector3.down)
         {
             anim.SetInteger("IsLookingAt", 3);
+            hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 180f));
         }
         if (moveValues == Vector3.left)
         {
             anim.SetInteger("IsLookingAt", 2);
+            hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 90f));
         }
         if (moveValues == Vector3.right)
         {
             anim.SetInteger("IsLookingAt", 4);
+            hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, -90f));
         }
-        /*if (moveValues.x>0 && moveValues.x < 1 && moveValues.y > 0 && moveValues.y < 1)
+        if (moveValues.x>0 && moveValues.x < 1 && moveValues.y > 0 && moveValues.y < 1)
         {
-            player.transform.rotation = Quaternion.Euler(0, 0, -45);
+            hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, -45f));
         }
         if (moveValues.x < 0 && moveValues.x > -1 && moveValues.y > 0 && moveValues.y < 1)
         {
-            player.transform.rotation = Quaternion.Euler(0, 0, 45);
+            hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 45f));
         }
         if (moveValues.x < 0 && moveValues.x > -1 && moveValues.y < 0 && moveValues.y > -1)
         {
-            player.transform.rotation = Quaternion.Euler(0, 0, 135);
+            hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 135f));
         }
         if (moveValues.x > 0 && moveValues.x < 1 && moveValues.y < 0 && moveValues.y > -1)
         {
-            player.transform.rotation = Quaternion.Euler(0, 0, -135);
-        }*/
+            hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, -135));
+        }
     }
 }
