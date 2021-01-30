@@ -3,9 +3,8 @@
 --- !u!1 &366680759300594865
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 5231286480633847032, guid: 9ca7f473b2ba7cb4d8480eaceb45fabc,
-    type: 3}
-  m_PrefabInstance: {fileID: 5588955469624295497}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
@@ -21,9 +20,8 @@ GameObject:
 --- !u!4 &366680759300594867
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 5231286480633847034, guid: 9ca7f473b2ba7cb4d8480eaceb45fabc,
-    type: 3}
-  m_PrefabInstance: {fileID: 5588955469624295497}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 366680759300594865}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -36,9 +34,8 @@ Transform:
 --- !u!212 &366680759300594864
 SpriteRenderer:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 5231286480633847033, guid: 9ca7f473b2ba7cb4d8480eaceb45fabc,
-    type: 3}
-  m_PrefabInstance: {fileID: 5588955469624295497}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 366680759300594865}
   m_Enabled: 1
@@ -72,7 +69,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1506004697365237894, guid: 275b27ed235a09f47aeaed7a95f1d29b,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -95,6 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 366680759476416650}
   - component: {fileID: 366680759476416651}
+  - component: {fileID: 836929820576838533}
   m_Layer: 0
   m_Name: Tronco_Caida_Down
   m_TagString: Untagged
@@ -110,7 +108,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 366680759476416648}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.11291599, z: 0}
+  m_LocalPosition: {x: 0, y: -0.028, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3275366819761862022}
@@ -167,6 +165,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &836929820576838533
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366680759476416648}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.41315007}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 3.047619, y: 3.047619}
+    newSize: {x: 3.047619, y: 3.047619}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.95238096, y: 0.82630014}
+  m_EdgeRadius: 0
 --- !u!1 &1166735643878054514
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,7 +214,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1166735643878054514}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10.230743, y: -7.684026, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -199,72 +223,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &5588955469624295497
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 3275366819761862022}
-    m_Modifications:
-    - target: {fileID: 5231286480633847032, guid: 9ca7f473b2ba7cb4d8480eaceb45fabc,
-        type: 3}
-      propertyPath: m_Name
-      value: Tronco_Caida_Up
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231286480633847034, guid: 9ca7f473b2ba7cb4d8480eaceb45fabc,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231286480633847034, guid: 9ca7f473b2ba7cb4d8480eaceb45fabc,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231286480633847034, guid: 9ca7f473b2ba7cb4d8480eaceb45fabc,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231286480633847034, guid: 9ca7f473b2ba7cb4d8480eaceb45fabc,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231286480633847034, guid: 9ca7f473b2ba7cb4d8480eaceb45fabc,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231286480633847034, guid: 9ca7f473b2ba7cb4d8480eaceb45fabc,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231286480633847034, guid: 9ca7f473b2ba7cb4d8480eaceb45fabc,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231286480633847034, guid: 9ca7f473b2ba7cb4d8480eaceb45fabc,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231286480633847034, guid: 9ca7f473b2ba7cb4d8480eaceb45fabc,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231286480633847034, guid: 9ca7f473b2ba7cb4d8480eaceb45fabc,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5231286480633847034, guid: 9ca7f473b2ba7cb4d8480eaceb45fabc,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9ca7f473b2ba7cb4d8480eaceb45fabc, type: 3}
