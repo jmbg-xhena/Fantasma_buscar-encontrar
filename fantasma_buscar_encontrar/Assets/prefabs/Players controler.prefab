@@ -169,7 +169,7 @@ MonoBehaviour:
     m_SingletonActionBindings:
     - m_Name: 
       m_Id: 1996ed56-05b5-47c1-93bf-18a27b9114c6
-      m_Path: <Keyboard>/rightShift
+      m_Path: <Keyboard>/rightCtrl
       m_Interactions: 
       m_Processors: 
       m_Groups: 
