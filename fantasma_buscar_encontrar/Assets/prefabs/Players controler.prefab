@@ -110,6 +110,22 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Input_accion P1
       m_Flags: 0
+  Input_interaccionP1:
+    m_Name: Input_interaccion P1
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 96c1be00-02b1-4ec5-89a0-f2393cd0c622
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 583c4124-ffcf-4085-8c21-5863092c2d05
+      m_Path: <Keyboard>/e
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input_interaccion P1
+      m_Flags: 0
   moveValuesP1: {x: 0, y: 0, z: 0}
   Input_moveP2:
     m_Name: Input_move P2
@@ -175,4 +191,4 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Input_accion P2
       m_Flags: 0
-  velocidadMovimiento: 0.02
+  velocidadMovimiento: 1
