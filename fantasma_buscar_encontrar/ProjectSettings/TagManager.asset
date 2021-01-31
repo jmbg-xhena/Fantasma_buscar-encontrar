@@ -11,6 +11,8 @@ TagManager:
   - Amelia
   - Aron
   - arma_aron
+  - aron
+  - linterna
   layers:
   - Default
   - TransparentFX

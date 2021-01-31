@@ -69,7 +69,7 @@ public class PlayerInput : MonoBehaviour
             //moverse fantasma
         moveValuesP2 = new Vector3(Input_moveP2.ReadValue<Vector2>().x, Input_moveP2.ReadValue<Vector2>().y, 0f);
         P2.transform.position += moveValuesP2 * (velocidadMovimiento * Time.deltaTime);
-        rotatePersonaje(P2anim, moveValuesP2,hitboxP2);
+        rotatePersonaje(P2anim, moveValuesP2, hitboxP2);
 
             //destruir trampas
         if (Input_accionP1.ReadValue<float>()==1&&CanAccionP1) {
@@ -118,38 +118,72 @@ public class PlayerInput : MonoBehaviour
         if (moveValues == Vector3.up)
         {
             anim.SetInteger("IsLookingAt", 1);
-            hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 0f));
+            if (!hbox.CompareTag("arma_aron"))
+            {
+                hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 0f));
+
+            }
         }
         if (moveValues == Vector3.down)
         {
             anim.SetInteger("IsLookingAt", 3);
-            hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 180f));
+            if (!hbox.CompareTag("arma_aron"))
+            {
+                hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 180f));
+
+            }
         }
         if (moveValues == Vector3.left)
         {
             anim.SetInteger("IsLookingAt", 2);
-            hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 90f));
+
+            if (!hbox.CompareTag("arma_aron"))
+            {
+                hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 90f));
+
+            }
         }
         if (moveValues == Vector3.right)
         {
             anim.SetInteger("IsLookingAt", 4);
-            hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, -90f));
+
+            if (!hbox.CompareTag("arma_aron"))
+            {
+                hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, -90f));
+
+            }
         }
         if (moveValues.x>0 && moveValues.x < 1 && moveValues.y > 0 && moveValues.y < 1)
         {
-            hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, -45f));
+            if (!hbox.CompareTag("arma_aron"))
+            {
+                hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, -45f));
+
+            }
         }
         if (moveValues.x < 0 && moveValues.x > -1 && moveValues.y > 0 && moveValues.y < 1)
         {
-            hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 45f));
+            if (!hbox.CompareTag("arma_aron"))
+            {
+                hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 45f));
+
+            }
         }
         if (moveValues.x < 0 && moveValues.x > -1 && moveValues.y < 0 && moveValues.y > -1)
         {
-            hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 135f));
+            if (!hbox.CompareTag("arma_aron"))
+            {
+                hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 135f));
+
+            }
         }
         if (moveValues.x > 0 && moveValues.x < 1 && moveValues.y < 0 && moveValues.y > -1)
         {
-            hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, -135));
+            if (!hbox.CompareTag("arma_aron"))
+            {
+                hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, -135));
+
+            }
         }
     }
 }

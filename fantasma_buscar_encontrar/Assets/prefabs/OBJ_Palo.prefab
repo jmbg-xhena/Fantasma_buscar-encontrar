@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1525508925648453004}
   - component: {fileID: 1525508925648453005}
+  - component: {fileID: 1080752976104751}
   m_Layer: 0
   m_Name: OBJ_Palo
   m_TagString: Untagged
@@ -83,6 +84,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1080752976104751
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525508925648453003}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.5714286}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 2.4285715, y: 1.1428572}
+    newSize: {x: 2.4285715, y: 1.1428572}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.4285715, y: 1.1428572}
+  m_EdgeRadius: 0
 --- !u!1 &5262983124247376032
 GameObject:
   m_ObjectHideFlags: 0
