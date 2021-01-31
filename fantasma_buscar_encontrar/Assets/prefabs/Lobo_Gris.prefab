@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 1677046496525529212}
   - component: {fileID: 3036681156966533986}
   - component: {fileID: 9149671287026270845}
+  - component: {fileID: 1842133599396111868}
+  - component: {fileID: 1033690469540551078}
+  - component: {fileID: 4207735779730367883}
+  - component: {fileID: 6045523966729343362}
   m_Layer: 0
   m_Name: Lobo_Gris
   m_TagString: Untagged
@@ -25,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906316940598456362}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.34, y: -7.24, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
@@ -93,7 +97,7 @@ SpriteRenderer:
   m_Sprite: {fileID: 7127189488999707006, guid: 0497fd387fd718041bf49b5ae0f0731d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 3.7619047, y: 2.047619}
@@ -102,3 +106,73 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &1842133599396111868
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906316940598456362}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 4.6874623, y: -0.000000558789}
+  m_Size: {x: 5.625253, y: 1.890047}
+  m_Direction: 1
+--- !u!114 &1033690469540551078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906316940598456362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fa32a6517fcc34eb6a27159949b69c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  t: 0
+  xScale: 0
+  initY: 0
+  amelia_entra: 0
+  aron_entra: 0
+  objeto_col: {fileID: 0}
+  direccion: 1
+  caminando: 1
+  atacando: 0
+  velocidad: 0.5
+--- !u!70 &4207735779730367883
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906316940598456362}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 2.87, y: 1.89}
+  m_Direction: 1
+--- !u!70 &6045523966729343362
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906316940598456362}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -4.72, y: -0.000000558789}
+  m_Size: {x: 5.625253, y: 1.890047}
+  m_Direction: 1
