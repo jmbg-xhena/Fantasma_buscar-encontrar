@@ -395,6 +395,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6571122175963075931, guid: 0fb87ce20d508f44baafe448a7fb705b,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fb87ce20d508f44baafe448a7fb705b, type: 3}
 --- !u!1001 &361333353
@@ -18668,11 +18673,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Aron
       objectReference: {fileID: 0}
-    - target: {fileID: 1177996513088058192, guid: 7bce7f831fa51f14e86bf89287f2286e,
-        type: 3}
-      propertyPath: m_TagString
-      value: Aron
-      objectReference: {fileID: 0}
     - target: {fileID: 1177996513088058194, guid: 7bce7f831fa51f14e86bf89287f2286e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18727,11 +18727,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5332639301636655972, guid: 7bce7f831fa51f14e86bf89287f2286e,
-        type: 3}
-      propertyPath: m_TagString
-      value: arma_aron
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bce7f831fa51f14e86bf89287f2286e, type: 3}
@@ -19092,15 +19087,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Amelia
       objectReference: {fileID: 0}
-    - target: {fileID: 4054292434034152873, guid: 09dfadeaa97e8c140b3d3660ef174cff,
-        type: 3}
-      propertyPath: m_TagString
-      value: Amelia
-      objectReference: {fileID: 0}
     - target: {fileID: 4054292434034152875, guid: 09dfadeaa97e8c140b3d3660ef174cff,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.82
+      value: -5.69
       objectReference: {fileID: 0}
     - target: {fileID: 4054292434034152875, guid: 09dfadeaa97e8c140b3d3660ef174cff,
         type: 3}
