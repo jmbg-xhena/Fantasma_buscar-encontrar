@@ -175,4 +175,20 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Input_accion P2
       m_Flags: 0
-  velocidadMovimiento: 0.02
+  Input_InteraccionP1:
+    m_Name: Input_Interaccion P1
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: da3302db-064e-4cf1-a13f-e1e5ee747535
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 42bae9b1-bcee-4f7f-aa9b-6d4bc56538bf
+      m_Path: <Keyboard>/e
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Input_Interaccion P1
+      m_Flags: 0
+  velocidadMovimiento: 1

@@ -19485,11 +19485,6 @@ PrefabInstance:
       propertyPath: P2
       value: 
       objectReference: {fileID: 676460261}
-    - target: {fileID: 6811974312754972991, guid: 17fb3aa094a85e8409dd717d7bc705d4,
-        type: 3}
-      propertyPath: velocidadMovimiento
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17fb3aa094a85e8409dd717d7bc705d4, type: 3}
 --- !u!1001 &1986394762

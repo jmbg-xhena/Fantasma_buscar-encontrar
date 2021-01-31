@@ -16,6 +16,7 @@ public class PlayerInput : MonoBehaviour
     public InputAction Input_moveP2;
     public InputAction Input_accionP2;
     private bool CanAccionP2;
+    public InputAction Input_InteraccionP1;
     private Vector3 moveValuesP2;
     public float velocidadMovimiento = 1.0f;
     private GameObject hitboxP1;
@@ -30,6 +31,7 @@ public class PlayerInput : MonoBehaviour
         Input_moveP2.Enable();
         Input_accionP1.Enable();
         Input_accionP2.Enable();
+        Input_InteraccionP1.Enable();
     }
 
     private void OnDisable()
@@ -38,6 +40,7 @@ public class PlayerInput : MonoBehaviour
         Input_moveP2.Disable();
         Input_accionP1.Disable();
         Input_accionP2.Disable();
+        Input_InteraccionP1.Disable();
     }
 
     // Start is called before the first frame update
@@ -72,7 +75,7 @@ public class PlayerInput : MonoBehaviour
         rotatePersonaje(P2anim, moveValuesP2,hitboxP2);
 
             //destruir trampas
-        if (Input_accionP1.ReadValue<float>()==1&&CanAccionP1) {
+        if (Input_accionP1.ReadValue<float>() == 1 && CanAccionP1) {
             CanAccionP1 = false;
             P1anim.SetBool("IsAttacking", true);
             print("ataque rama/piedra");
@@ -85,6 +88,13 @@ public class PlayerInput : MonoBehaviour
             //activar ataque mágico;
             print("ataque magico");
             Invoke("activarAccionP2", coolDownAcciones);
+        }
+
+        if(Input_InteraccionP1.ReadValue<float>() == 1 && CanAccionP1)
+        {
+            CanAccionP1 = false;
+            print("INTERACCIOOOOOOOOOOOOOOOOOON");
+            Invoke("activarAccionP1", coolDownAcciones);
         }
 
         ///
