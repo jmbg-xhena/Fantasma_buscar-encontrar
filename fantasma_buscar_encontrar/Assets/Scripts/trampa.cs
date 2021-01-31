@@ -30,22 +30,27 @@ public class trampa : MonoBehaviour
                 anim.SetBool("Activate", true);
                 activated = true;
             }
-            if (collision.transform.CompareTag("Aron"))
+            if (collision.transform.CompareTag("Amelia"))
             {
-                anim.SetBool("Hit", true);
-                //Mata a Aron
-            }
-            else if (collision.transform.CompareTag("Amelia"))
-            {
-                if (collision.gameObject.GetComponent<humano>().stick == true)
-                {
-                    collision.gameObject.GetComponent<humano>().stick = false;
-                }
-                else
+                if (collision.gameObject.GetComponent<humano>().stick == false)
                 {
                     anim.SetBool("Hit", true);
+                    print("destruye amelia");
+
                     //mata a Amelia
                 }
+                else if (collision.gameObject.GetComponent<humano>().stick == true)
+                {
+                    collision.gameObject.GetComponent<humano>().stick = false;
+                    print("destruye palo");
+                }
+            }
+            else if (collision.transform.CompareTag("Aron"))
+            {
+                anim.SetBool("Hit", true);
+                print("destruye aron");
+
+                //Mata a Aron
             }
         }
     }

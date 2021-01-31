@@ -97,6 +97,26 @@ public class PlayerInput : MonoBehaviour
             CanAccionP1 = false;
             print("Interaccion");
             Invoke("activarAccionP1", coolDownAcciones);
+            P1.GetComponent<humano>().agarrarObjeto = true;
+            StartCoroutine(deactivateAction());
+        }
+        if (P1.GetComponent<humano>().stick == true)
+        {
+            P1anim.SetBool("Stick", true);
+        }
+        else if (P1.GetComponent<humano>().stone == true)
+        {
+            P1anim.SetBool("Stone", true);
+
+        }
+        else if (P1.GetComponent<humano>().stick == false)
+        {
+            P1anim.SetBool("Stick", false);
+        }
+        else if (P1.GetComponent<humano>().stone == false)
+        {
+            P1anim.SetBool("Stone", false);
+
         }
 
         ///
@@ -112,6 +132,12 @@ public class PlayerInput : MonoBehaviour
     {
         //P1Script.rama.SetActive(false);
         CanAccionP2 = true;
+    }
+
+    IEnumerator deactivateAction()
+    {
+        yield return new WaitForSeconds(.15f);
+        P1.GetComponent<humano>().agarrarObjeto = false;
     }
 
 

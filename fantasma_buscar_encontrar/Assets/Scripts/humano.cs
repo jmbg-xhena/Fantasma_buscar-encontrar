@@ -8,6 +8,9 @@ public class humano : MonoBehaviour
     public int no_paginas;
     public bool stick = false;
     public bool stone = false;
+
+    public bool agarrarObjeto = false;
+
     [Header("animacion")]
     private Animator anim;
     public GameObject hbox;
@@ -52,6 +55,11 @@ public class humano : MonoBehaviour
         {
             print("humano game over");
         }
+    }
+
+    public void AgarrarObjeto()
+    {
+
     }
 
     /*private void OnTriggerEnter2D(Collider2D collision)
