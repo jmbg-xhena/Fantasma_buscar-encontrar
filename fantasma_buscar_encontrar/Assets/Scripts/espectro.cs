@@ -36,6 +36,7 @@ public class espectro : MonoBehaviour
         if (collision.transform.CompareTag("Aron")) {
             if (!chocando)
             {
+                print(transform.position.x-collision.transform.position.x);
                 if (transform.position.x - collision.transform.position.x < 0) {
                     transform.localScale = new Vector3(xScale, transform.localScale.y, transform.localScale.z);
                 }
@@ -54,11 +55,11 @@ public class espectro : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        print(collision);
         if (collision.transform.CompareTag("Aron"))
         {
             chocando = true;
             gameObject.GetComponent<Animator>().SetBool("Consuming", true);
-            collision.gameObject.GetComponent<Animator>().SetTrigger("dead");
         }
     }
 
