@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1355025835545299309}
   - component: {fileID: 8610748944154777579}
+  - component: {fileID: 926763360}
+  - component: {fileID: 926763363}
   m_Layer: 0
   m_Name: "Monolito ni\xF1a"
   m_TagString: Untagged
@@ -70,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2332434655274301377, guid: 806ffcbf08f3a8940947663c4c1e88e9,
+  m_Sprite: {fileID: 1394045643314253520, guid: 806ffcbf08f3a8940947663c4c1e88e9,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -82,3 +84,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &926763360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640034953063907120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3198049b482009b43a739061e6799eee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monolitoDeAmelia: 1
+  isActivated: 0
+  spriteRenderer: {fileID: 0}
+  spriteMonolito: {fileID: 1394045643314253520, guid: 806ffcbf08f3a8940947663c4c1e88e9,
+    type: 3}
+  spriteMonolitoActivado: {fileID: 3592839274092266669, guid: 806ffcbf08f3a8940947663c4c1e88e9,
+    type: 3}
+  spriteMonolitoAron: {fileID: 617221371108648391, guid: 806ffcbf08f3a8940947663c4c1e88e9,
+    type: 3}
+  spriteMonolitoAmelia: {fileID: -2332434655274301377, guid: 806ffcbf08f3a8940947663c4c1e88e9,
+    type: 3}
+--- !u!61 &926763363
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640034953063907120}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 3.047619, y: 3.047619}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2}
+  m_EdgeRadius: 0
