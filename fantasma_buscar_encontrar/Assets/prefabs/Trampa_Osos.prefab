@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3101210497919850641}
   - component: {fileID: 6947651479194993140}
   - component: {fileID: 1912855447}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 3101210498018870120}
   - component: {fileID: 3456584924575724247}
   - component: {fileID: 1986000958}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3101210498472065454}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Trampa_Osos
   m_TagString: trampa
   m_Icon: {fileID: 0}
