@@ -11,6 +11,8 @@ TagManager:
   - Amelia
   - Aron
   - arma_aron
+  - aron
+  - arma_amelia
   layers:
   - Default
   - TransparentFX
@@ -20,8 +22,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - hitbox
+  - player
   - 
   - 
   - 
