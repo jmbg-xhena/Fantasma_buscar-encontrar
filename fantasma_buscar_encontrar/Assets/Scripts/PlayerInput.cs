@@ -117,39 +117,72 @@ public class PlayerInput : MonoBehaviour
 
         if (moveValues == Vector3.up)
         {
+            
             anim.SetInteger("IsLookingAt", 1);
-            hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 0f));
+            if (!hbox.CompareTag("arma_aron"))
+            {
+                hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 0f));
+
+            }
         }
         if (moveValues == Vector3.down)
         {
             anim.SetInteger("IsLookingAt", 3);
-            hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 180f));
+            if (!hbox.CompareTag("arma_aron"))
+            {
+                hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 180f));
+
+            }
         }
         if (moveValues == Vector3.left)
         {
             anim.SetInteger("IsLookingAt", 2);
-            hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 90f));
+            if (!hbox.CompareTag("arma_aron"))
+            {
+                hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 90f));
+
+            }
         }
         if (moveValues == Vector3.right)
         {
             anim.SetInteger("IsLookingAt", 4);
-            hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, -90f));
+            if (!hbox.CompareTag("arma_aron"))
+            {
+                hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, -90f));
+
+            }
         }
         if (moveValues.x>0 && moveValues.x < 1 && moveValues.y > 0 && moveValues.y < 1)
         {
-            hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, -45f));
+            if (!hbox.CompareTag("arma_aron"))
+            {
+                hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, -45f));
+
+            }
         }
         if (moveValues.x < 0 && moveValues.x > -1 && moveValues.y > 0 && moveValues.y < 1)
         {
-            hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 45f));
+            if (!hbox.CompareTag("arma_aron"))
+            {
+                hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 45f));
+
+            }
         }
         if (moveValues.x < 0 && moveValues.x > -1 && moveValues.y < 0 && moveValues.y > -1)
         {
+            if (!hbox.CompareTag("arma_aron"))
+            {
             hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 135f));
+
+            }
         }
         if (moveValues.x > 0 && moveValues.x < 1 && moveValues.y < 0 && moveValues.y > -1)
         {
-            hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, -135));
+            if (!hbox.CompareTag("arma_aron"))
+            {
+                hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, -135));
+
+            }
         }
     }
 }
