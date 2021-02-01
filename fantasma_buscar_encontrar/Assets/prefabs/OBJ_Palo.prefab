@@ -203,3 +203,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentPalo: {fileID: 1525508925648453003}
+  piedra: {fileID: 3790238246453749503, guid: 5faa40930dcf91940b098d48d1289c1a, type: 3}
+  instance: {fileID: 0}
