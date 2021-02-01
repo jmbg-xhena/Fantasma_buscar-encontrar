@@ -23,7 +23,7 @@ public class goal : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.CompareTag("humano")) {
+        if (collision.transform.CompareTag("Aron")) {
             player = collision.GetComponent<humano>();
             if (llaves_necesarias == player.no_llaves && paginas_necesarias == player.no_paginas) {
                 print("cambiar de nivel");
