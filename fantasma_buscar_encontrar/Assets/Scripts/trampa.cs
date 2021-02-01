@@ -73,4 +73,14 @@ public class trampa : MonoBehaviour
             print("destruye palo");
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.CompareTag("piedra")) {
+            gameObject.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.None;
+            anim.SetBool("Activate", true);
+            activated = true;
+            collision.GetComponentInParent<Rigidbody2D>().velocity = Vector2.zero;
+        }
+    }
 }

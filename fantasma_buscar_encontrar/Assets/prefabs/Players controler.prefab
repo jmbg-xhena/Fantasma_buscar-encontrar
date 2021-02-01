@@ -191,4 +191,22 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Input_accion P2
       m_Flags: 0
+  Lanzar_piedra:
+    m_Name: Lanzar_piedra
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 0a89f3d7-1f29-48bc-a307-ebccb3cdf9c5
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: c29e9115-cc2e-4166-b0d8-aef2c5b0fd62
+      m_Path: <Keyboard>/q
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Lanzar_piedra
+      m_Flags: 0
   velocidadMovimiento: 1
+  piedra: {fileID: 3790238246453749503, guid: 5faa40930dcf91940b098d48d1289c1a, type: 3}
+  launch_force: 300
