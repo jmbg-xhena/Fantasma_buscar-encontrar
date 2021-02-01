@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: -6973701572615066740}
   m_Layer: 13
   m_Name: Lobo_Blanco
-  m_TagString: Untagged
+  m_TagString: lobo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

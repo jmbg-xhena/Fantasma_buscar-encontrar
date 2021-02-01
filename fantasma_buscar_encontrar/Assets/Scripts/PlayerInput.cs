@@ -16,11 +16,17 @@ public class PlayerInput : MonoBehaviour
     public Vector3 moveValuesP1;
     public InputAction Input_moveP2;
     public InputAction Input_accionP2;
+    public InputAction Lanzar_piedra;
     private bool CanAccionP2;
     private Vector3 moveValuesP2;
     public float velocidadMovimiento = 1.0f;
     private GameObject hitboxP1;
     private GameObject hitboxP2;
+    public GameObject piedra;
+    private GameObject instance;
+    public float launch_force=10;
+    private float launch_value_x;
+    private float launch_value_y;
 
     private Animator P1anim;
     private Animator P2anim;
@@ -32,7 +38,7 @@ public class PlayerInput : MonoBehaviour
         Input_accionP1.Enable();
         Input_accionP2.Enable();
         Input_interaccionP1.Enable();
-
+        Lanzar_piedra.Enable();
     }
 
     private void OnDisable()
@@ -42,7 +48,7 @@ public class PlayerInput : MonoBehaviour
         Input_accionP1.Disable();
         Input_accionP2.Disable();
         Input_interaccionP1.Disable();
-
+        Lanzar_piedra.Disable();
     }
 
     // Start is called before the first frame update
@@ -71,7 +77,12 @@ public class PlayerInput : MonoBehaviour
         P1.transform.position += moveValuesP1 * (velocidadMovimiento * Time.deltaTime);
         rotatePersonaje(P1anim, moveValuesP1,hitboxP1);
 
-            //moverse fantasma
+        if (moveValuesP1.x != 0 || moveValuesP1.y != 0) {
+            launch_value_x = moveValuesP1.x;
+            launch_value_y = moveValuesP1.y;
+        }
+
+        //moverse fantasma
         moveValuesP2 = new Vector3(Input_moveP2.ReadValue<Vector2>().x, Input_moveP2.ReadValue<Vector2>().y, 0f);
         P2.transform.position += moveValuesP2 * (velocidadMovimiento * Time.deltaTime);
         rotatePersonaje(P2anim, moveValuesP2,hitboxP2);
@@ -119,10 +130,20 @@ public class PlayerInput : MonoBehaviour
 
         }
 
-        ///
+        if (Lanzar_piedra.ReadValue<float>() == 1 && CanAccionP1 && P1.GetComponent<humano>().stone == true)
+        {
+            CanAccionP1 = false;
+            Invoke("activarAccionP1", coolDownAcciones);
+            P1.GetComponent<humano>().stone = false;
+            instance = Instantiate(piedra);
+            instance.transform.position = P1.transform.position;
+            instance.GetComponent<Rigidbody2D>().AddForce(new Vector2(launch_value_x, launch_value_y)*launch_force);
+        }
+
+            ///
 
 
-    }
+        }
 
     void activarAccionP1() {
         //P1Script.rama.SetActive(false);
