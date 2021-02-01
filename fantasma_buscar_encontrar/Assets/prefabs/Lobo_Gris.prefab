@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 1842133599396111868}
   - component: {fileID: 1033690469540551078}
   - component: {fileID: 4207735779730367883}
-  - component: {fileID: 6045523966729343362}
   - component: {fileID: -6483666629000591581}
   m_Layer: 13
   m_Name: Lobo_Gris
@@ -30,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906316940598456362}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.34, y: -7.24, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
@@ -160,22 +159,6 @@ CapsuleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 2.87, y: 1.89}
-  m_Direction: 1
---- !u!70 &6045523966729343362
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 906316940598456362}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -4.72, y: -0.000000558789}
-  m_Size: {x: 5.625253, y: 1.890047}
   m_Direction: 1
 --- !u!50 &-6483666629000591581
 Rigidbody2D:

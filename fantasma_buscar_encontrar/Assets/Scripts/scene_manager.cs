@@ -36,6 +36,15 @@ public class scene_manager : MonoBehaviour
     }
 
     public void nextScene() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (SceneManager.GetActiveScene().buildIndex + 1 == 4)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3 );
+
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+        }
     }
 }

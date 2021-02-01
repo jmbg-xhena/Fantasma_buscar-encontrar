@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 786058625454684875}
   - component: {fileID: 3427056551826129417}
   - component: {fileID: 5056236317700994955}
-  - component: {fileID: 5347642273616314590}
   - component: {fileID: 1804166611304337316}
   m_Layer: 13
   m_Name: Lobo_Negro
@@ -160,22 +159,6 @@ CapsuleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 2.87, y: 1.89}
-  m_Direction: 1
---- !u!70 &5347642273616314590
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6536822768913658179}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -4.72, y: -0.000000558789}
-  m_Size: {x: 5.625253, y: 1.890047}
   m_Direction: 1
 --- !u!50 &1804166611304337316
 Rigidbody2D:

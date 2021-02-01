@@ -5,6 +5,9 @@ using UnityEngine;
 public class Monolito : MonoBehaviour
 {
     public bool monolitoDeAmelia;
+
+    public bool activadoFinal = false;
+
     public bool isActivated = false;
     public SpriteRenderer spriteRenderer;
 
@@ -19,6 +22,21 @@ public class Monolito : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    private void Update()
+    {
+        if (activadoFinal == true)
+        {
+            if (monolitoDeAmelia)
+            {
+                spriteRenderer.sprite = spriteMonolitoAmelia;
+            }
+            else
+            {
+                spriteRenderer.sprite = spriteMonolitoAron;
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
