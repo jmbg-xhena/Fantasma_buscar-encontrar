@@ -12,7 +12,7 @@ public class palo : MonoBehaviour
     {
         if (collision.CompareTag("Amelia"))
         {
-            if (collision.GetComponent<humano>().agarrarObjeto == true)
+            if (collision.GetComponent<humano>().agarrarObjeto == true && collision.GetComponent<humano>().stick ==false)
             {
                 collision.GetComponent<humano>().agarrarObjeto = false;
                 collision.GetComponent<humano>().stick = true;

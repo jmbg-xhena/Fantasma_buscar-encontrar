@@ -10,7 +10,7 @@ public class piedra : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Amelia"))
+        if (collision.CompareTag("Amelia") && collision.GetComponent<humano>().stone == false)
         {
             if (collision.GetComponent<humano>().agarrarObjeto == true)
             {
