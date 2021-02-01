@@ -17,6 +17,7 @@ TagManager:
   - piedra
   - trampaUp
   - trampaDown
+  - awa
   layers:
   - Default
   - TransparentFX

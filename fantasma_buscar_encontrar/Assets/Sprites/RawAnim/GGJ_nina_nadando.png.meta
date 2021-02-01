@@ -1,7 +1,139 @@
 fileFormatVersion: 2
 guid: 7b4dd6e96ef310c43aeed34b51984d1a
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4128891865087096726
+    second: GGJ_nina_nadando_0
+  - first:
+      213: 6143560129589996974
+    second: GGJ_nina_nadando_1
+  - first:
+      213: -385080228186906764
+    second: GGJ_nina_nadando_2
+  - first:
+      213: 1533683728320899638
+    second: GGJ_nina_nadando_3
+  - first:
+      213: 6644641252831049967
+    second: GGJ_nina_nadando_4
+  - first:
+      213: -8755783348273326711
+    second: GGJ_nina_nadando_5
+  - first:
+      213: -8533668495742366381
+    second: GGJ_nina_nadando_6
+  - first:
+      213: 8197719670635130147
+    second: GGJ_nina_nadando_7
+  - first:
+      213: 8499859376422969441
+    second: GGJ_nina_nadando_8
+  - first:
+      213: 3816161518041852268
+    second: GGJ_nina_nadando_9
+  - first:
+      213: 5660622560112303795
+    second: GGJ_nina_nadando_10
+  - first:
+      213: -1822820594186000047
+    second: GGJ_nina_nadando_11
+  - first:
+      213: 1460406946126585154
+    second: GGJ_nina_nadando_12
+  - first:
+      213: 2969432640464384657
+    second: GGJ_nina_nadando_13
+  - first:
+      213: 4738319872488827009
+    second: GGJ_nina_nadando_14
+  - first:
+      213: 7706655254788381961
+    second: GGJ_nina_nadando_15
+  - first:
+      213: -5377409196102750903
+    second: GGJ_nina_nadando_16
+  - first:
+      213: -1008630263463649272
+    second: GGJ_nina_nadando_17
+  - first:
+      213: 8154431533288235091
+    second: GGJ_nina_nadando_18
+  - first:
+      213: 2322349674707690258
+    second: GGJ_nina_nadando_19
+  - first:
+      213: -5806824795864359177
+    second: GGJ_nina_nadando_20
+  - first:
+      213: 2680659014301920254
+    second: GGJ_nina_nadando_21
+  - first:
+      213: 6058527953505873914
+    second: GGJ_nina_nadando_0
+  - first:
+      213: -656365782721788881
+    second: GGJ_nina_nadando_1
+  - first:
+      213: -2271706241173483427
+    second: GGJ_nina_nadando_2
+  - first:
+      213: -209467389973951330
+    second: GGJ_nina_nadando_3
+  - first:
+      213: 1799336978880015326
+    second: GGJ_nina_nadando_4
+  - first:
+      213: 4255992607508300488
+    second: GGJ_nina_nadando_5
+  - first:
+      213: 5120902223682463500
+    second: GGJ_nina_nadando_6
+  - first:
+      213: -4386909523920078290
+    second: GGJ_nina_nadando_7
+  - first:
+      213: 8412535851877769014
+    second: GGJ_nina_nadando_8
+  - first:
+      213: -8557866190468031278
+    second: GGJ_nina_nadando_9
+  - first:
+      213: 5602004119617410316
+    second: GGJ_nina_nadando_10
+  - first:
+      213: -2400708211912336886
+    second: GGJ_nina_nadando_11
+  - first:
+      213: 7080204466022509803
+    second: GGJ_nina_nadando_12
+  - first:
+      213: -1055874035485126873
+    second: GGJ_nina_nadando_13
+  - first:
+      213: 6133381063653284162
+    second: GGJ_nina_nadando_14
+  - first:
+      213: -1328377191470097788
+    second: GGJ_nina_nadando_15
+  - first:
+      213: 8185853780254474235
+    second: GGJ_nina_nadando_16
+  - first:
+      213: 8836002867695652247
+    second: GGJ_nina_nadando_17
+  - first:
+      213: -7806493352138277355
+    second: GGJ_nina_nadando_18
+  - first:
+      213: -1709832507840105388
+    second: GGJ_nina_nadando_19
+  - first:
+      213: 2273293171362936416
+    second: GGJ_nina_nadando_20
+  - first:
+      213: -135882662655954848
+    second: GGJ_nina_nadando_21
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -31,7 +163,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,12 +172,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 21
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -64,7 +196,43 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -73,7 +241,469 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: GGJ_nina_nadando_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 275
+        width: 18
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: affed720317341450800000000000000
+      internalID: 6058527953505873914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GGJ_nina_nadando_1
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 275
+        width: 18
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2485265cce14e6f0800000000000000
+      internalID: -656365782721788881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GGJ_nina_nadando_2
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 275
+        width: 18
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5011dca5374970e0800000000000000
+      internalID: -2271706241173483427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GGJ_nina_nadando_3
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 275
+        width: 18
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c0394c482d71df0800000000000000
+      internalID: -209467389973951330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GGJ_nina_nadando_4
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 275
+        width: 18
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb2e51f27788f810800000000000000
+      internalID: 1799336978880015326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GGJ_nina_nadando_5
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 211
+        width: 18
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c288313ab2501b30800000000000000
+      internalID: 4255992607508300488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GGJ_nina_nadando_6
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 211
+        width: 18
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c07e914d079111740800000000000000
+      internalID: 5120902223682463500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GGJ_nina_nadando_7
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 211
+        width: 18
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a37f4e7019e13c0800000000000000
+      internalID: -4386909523920078290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GGJ_nina_nadando_8
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 211
+        width: 18
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63f996729c45fb470800000000000000
+      internalID: 8412535851877769014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GGJ_nina_nadando_9
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 211
+        width: 18
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dcd3d19a0a5c3980800000000000000
+      internalID: -8557866190468031278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GGJ_nina_nadando_10
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 147
+        width: 18
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c05121ce0115ebd40800000000000000
+      internalID: 5602004119617410316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GGJ_nina_nadando_11
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 147
+        width: 18
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a1a9bc998feaed0800000000000000
+      internalID: -2400708211912336886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GGJ_nina_nadando_12
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 147
+        width: 18
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bece7660370f14260800000000000000
+      internalID: 7080204466022509803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GGJ_nina_nadando_13
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 147
+        width: 18
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72fc953b828c851f0800000000000000
+      internalID: -1055874035485126873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GGJ_nina_nadando_14
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 149
+        width: 14
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2495923d4952e1550800000000000000
+      internalID: 6133381063653284162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GGJ_nina_nadando_15
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 85
+        width: 15
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a91be7bf7a09de0800000000000000
+      internalID: -1328377191470097788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GGJ_nina_nadando_16
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 85
+        width: 14
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bff3b5384aef99170800000000000000
+      internalID: 8185853780254474235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GGJ_nina_nadando_17
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 85
+        width: 14
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79d05530bc9cf9a70800000000000000
+      internalID: 8836002867695652247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GGJ_nina_nadando_18
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 85
+        width: 14
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51e795428a3c9a390800000000000000
+      internalID: -7806493352138277355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GGJ_nina_nadando_19
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 85
+        width: 14
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45476c8a4647548e0800000000000000
+      internalID: -1709832507840105388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GGJ_nina_nadando_20
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 21
+        width: 14
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 066b86d481c5c8f10800000000000000
+      internalID: 2273293171362936416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GGJ_nina_nadando_21
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 21
+        width: 15
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 060f141307f3d1ef0800000000000000
+      internalID: -135882662655954848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
