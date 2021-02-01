@@ -35,7 +35,7 @@ public class trampa : MonoBehaviour
                 gameObject.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.None;
                 anim.SetBool("Activate", true);
                 activated = true;
-
+                
             }
             if (collision.transform.CompareTag("Amelia"))
             {

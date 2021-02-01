@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 public class humano : MonoBehaviour
 {
     [Header("inventario")]
@@ -37,19 +38,31 @@ public class humano : MonoBehaviour
         hbox.SetActive(true);
     }
 
+    public void reload_scene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.CompareTag("trampa"))
+        if (collision.transform.CompareTag("trampa") || collision.transform.CompareTag("trampaUp") || collision.transform.CompareTag("trampaDown"))
         {
             if (stick == false)
             {
-                print("humano game over");
+                anim.SetTrigger("dead");
             }
             else {
-                Destroy(collision.gameObject);
+               Collider2D[] cols = collision.gameObject.transform.parent.gameObject.GetComponentsInChildren<Collider2D>();
+                for (int i = 0; i < cols.Length; i++) {
+                    cols[i].enabled = false;
+                }
             }
         }
 
+        if (collision.transform.CompareTag("vacio"))
+        {
+            anim.SetTrigger("fall");
+        }
 
         if (collision.transform.CompareTag("lobo"))
         {

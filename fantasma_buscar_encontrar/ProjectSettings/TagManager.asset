@@ -18,6 +18,7 @@ TagManager:
   - trampaUp
   - trampaDown
   - awa
+  - vacio
   layers:
   - Default
   - TransparentFX

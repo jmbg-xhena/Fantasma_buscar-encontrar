@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class fantasma : MonoBehaviour
 {
@@ -39,11 +40,19 @@ public class fantasma : MonoBehaviour
         spriteRenderer.color = linternaBlanca;
     }
 
+    public void reload_scene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.CompareTag("espectro"))
+        if (collision.transform.CompareTag("trampa") || collision.transform.CompareTag("trampaUp") || collision.transform.CompareTag("trampaDown"))
         {
-            print("fantasma game over");
+            anim.SetTrigger("dead");
+        }
+        if (collision.transform.CompareTag("vacio")) {
+            anim.SetTrigger("fall");
         }
     }
 }
