@@ -7,6 +7,9 @@ public class trampa : MonoBehaviour
     Animator anim;
     Animation cerrar_clip;
 
+    public GameObject colAmelia;
+    public GameObject colAron;
+
     bool activated = false;
 
     // Start is called before the first frame update
@@ -14,6 +17,9 @@ public class trampa : MonoBehaviour
     {
         gameObject.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
         anim = gameObject.GetComponent<Animator>();
+
+        colAmelia = GameObject.FindGameObjectWithTag("Amelia");
+        colAron = GameObject.FindGameObjectWithTag("Aron");
     }
 
     // Update is called once per frame
@@ -29,11 +35,13 @@ public class trampa : MonoBehaviour
                 gameObject.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.None;
                 anim.SetBool("Activate", true);
                 activated = true;
+
             }
             if (collision.transform.CompareTag("Amelia"))
             {
                 if (collision.gameObject.GetComponent<humano>().stick == false)
                 {
+
                     anim.SetBool("Hit", true);
                     print("destruye amelia");
 
@@ -41,17 +49,28 @@ public class trampa : MonoBehaviour
                 }
                 else if (collision.gameObject.GetComponent<humano>().stick == true)
                 {
-                    collision.gameObject.GetComponent<humano>().stick = false;
-                    print("destruye palo");
+                    StartCoroutine(DestruirPalo());
                 }
             }
             else if (collision.transform.CompareTag("Aron"))
             {
+
                 anim.SetBool("Hit", true);
                 print("destruye aron");
-
                 //Mata a Aron
             }
+        }
+    }
+
+    IEnumerator DestruirPalo()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        if (this.gameObject.CompareTag("trampaDown"))
+        {
+
+            colAmelia.GetComponent<humano>().stick = false;
+            print("destruye palo");
         }
     }
 }
