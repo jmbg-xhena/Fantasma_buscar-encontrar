@@ -114,10 +114,12 @@ public class PlayerInput : MonoBehaviour
         if (P1.GetComponent<humano>().stick == true)
         {
             P1anim.SetBool("Stick", true);
+            P1anim.SetBool("Stone", false);
         }
         else if (P1.GetComponent<humano>().stone == true)
         {
             P1anim.SetBool("Stone", true);
+            P1anim.SetBool("Stick", false);
 
         }
         else if (P1.GetComponent<humano>().stick == false)
