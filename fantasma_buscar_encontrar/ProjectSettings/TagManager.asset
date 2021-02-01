@@ -13,6 +13,8 @@ TagManager:
   - arma_aron
   - aron
   - arma_amelia
+  - palo
+  - piedra
   layers:
   - Default
   - TransparentFX

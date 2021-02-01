@@ -11,6 +11,7 @@ public class PlayerInput : MonoBehaviour
     public float coolDownAcciones = 0.1f;
     public InputAction Input_moveP1;
     public InputAction Input_accionP1;
+    public InputAction Input_interaccionP1;
     private bool CanAccionP1;
     public Vector3 moveValuesP1;
     public InputAction Input_moveP2;
@@ -30,6 +31,8 @@ public class PlayerInput : MonoBehaviour
         Input_moveP2.Enable();
         Input_accionP1.Enable();
         Input_accionP2.Enable();
+        Input_interaccionP1.Enable();
+
     }
 
     private void OnDisable()
@@ -38,6 +41,8 @@ public class PlayerInput : MonoBehaviour
         Input_moveP2.Disable();
         Input_accionP1.Disable();
         Input_accionP2.Disable();
+        Input_interaccionP1.Disable();
+
     }
 
     // Start is called before the first frame update
@@ -45,7 +50,7 @@ public class PlayerInput : MonoBehaviour
     {
         CanAccionP1 = true;
         CanAccionP2 = true;
-        P1=GameObject.FindGameObjectWithTag("Amelia");
+        P1= GameObject.FindGameObjectWithTag("Amelia");
         P2 = GameObject.FindGameObjectWithTag("Aron");
         P1Script = P1.GetComponent<humano>();
         P2Script = P2.GetComponent<fantasma>();
@@ -85,6 +90,33 @@ public class PlayerInput : MonoBehaviour
             //activar ataque mágico;
             print("ataque magico");
             Invoke("activarAccionP2", coolDownAcciones);
+            
+        }
+        if (Input_interaccionP1.ReadValue<float>() == 1 && CanAccionP1)
+        {
+            CanAccionP1 = false;
+            print("Interaccion");
+            Invoke("activarAccionP1", coolDownAcciones);
+            P1.GetComponent<humano>().agarrarObjeto = true;
+            StartCoroutine(deactivateAction());
+        }
+        if (P1.GetComponent<humano>().stick == true)
+        {
+            P1anim.SetBool("Stick", true);
+        }
+        else if (P1.GetComponent<humano>().stone == true)
+        {
+            P1anim.SetBool("Stone", true);
+
+        }
+        else if (P1.GetComponent<humano>().stick == false)
+        {
+            P1anim.SetBool("Stick", false);
+        }
+        else if (P1.GetComponent<humano>().stone == false)
+        {
+            P1anim.SetBool("Stone", false);
+
         }
 
         ///
@@ -100,6 +132,12 @@ public class PlayerInput : MonoBehaviour
     {
         //P1Script.rama.SetActive(false);
         CanAccionP2 = true;
+    }
+
+    IEnumerator deactivateAction()
+    {
+        yield return new WaitForSeconds(.15f);
+        P1.GetComponent<humano>().agarrarObjeto = false;
     }
 
 
