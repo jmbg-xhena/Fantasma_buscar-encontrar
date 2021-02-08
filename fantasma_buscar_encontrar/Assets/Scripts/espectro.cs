@@ -5,7 +5,7 @@ using UnityEngine;
 public class espectro : MonoBehaviour
 {
     public float t = 0;
-    private bool chocando;
+    public bool chocando;
     public float xScale;
     // Start is called before the first frame update
     void Start()
@@ -21,36 +21,13 @@ public class espectro : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.CompareTag("Aron"))
-        {
-            t = 0;
-        }
         if (collision.transform.CompareTag("arma_amelia"))
         {
             gameObject.GetComponent<Animator>().SetTrigger("muerto");
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.transform.CompareTag("Aron")) {
-            if (!chocando)
-            {
-                if (transform.position.x - collision.transform.position.x < 0) {
-                    transform.localScale = new Vector3(xScale, transform.localScale.y, transform.localScale.z);
-                }
-                if (transform.position.x - collision.transform.position.x > 0)
-                {
-                    transform.localScale = new Vector3(-xScale, transform.localScale.y, transform.localScale.z);
-                }
-                t += 0.00008f;
-                if (t > 0.001) {
-                    t = 0.01f;
-                }
-                transform.position=Vector3.MoveTowards(transform.position, collision.transform.position, t);
-            }
-        }
-    }
+    
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

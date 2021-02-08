@@ -207,6 +207,6 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Lanzar_piedra
       m_Flags: 0
-  velocidadMovimiento: 1.3
+  velocidadMovimiento: 1.5
   piedra: {fileID: 3790238246453749503, guid: 5faa40930dcf91940b098d48d1289c1a, type: 3}
   launch_force: 300

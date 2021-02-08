@@ -472,9 +472,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3873713087450737613}
-  - component: {fileID: 6816026148862524855}
   - component: {fileID: 170081602}
   - component: {fileID: 535974316}
+  - component: {fileID: 7076475433359674814}
   m_Layer: 11
   m_Name: hitbox
   m_TagString: arma_aron
@@ -496,18 +496,6 @@ Transform:
   m_Father: {fileID: 1177996513088058194}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6816026148862524855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5332639301636655972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bfad3d901f82b64e8c0c4a4c06b3eaf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &170081602
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -545,3 +533,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &7076475433359674814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5332639301636655972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bfad3d901f82b64e8c0c4a4c06b3eaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

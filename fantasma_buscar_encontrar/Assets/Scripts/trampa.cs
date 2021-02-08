@@ -33,7 +33,10 @@ public class trampa : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.None;
             anim.SetBool("Activate", true);
             activated = true;
-            collision.GetComponentInParent<Rigidbody2D>().velocity = Vector2.zero;
+            if (this.gameObject.CompareTag("trampaDown"))
+            {
+                StartCoroutine(DestruirPiedra(collision));
+            }
         }
     }
 
@@ -63,6 +66,7 @@ public class trampa : MonoBehaviour
                 else if (collision.gameObject.GetComponent<humano>().stick == true)
                 {
                     StartCoroutine(DestruirPalo());
+
                 }
             }
             else if (collision.transform.CompareTag("Aron"))
@@ -81,11 +85,24 @@ public class trampa : MonoBehaviour
 
         if (this.gameObject.CompareTag("trampaDown"))
         {
+            this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
 
             colAmelia.GetComponent<humano>().stick = false;
             print("destruye palo");
         }
     }
 
+    IEnumerator DestruirPiedra(Collider2D collision)
+    {
+        yield return new WaitForSeconds(0.1f);
+        Destroy(collision.GetComponentInParent<Rigidbody2D>().gameObject);
+
+        if (this.gameObject.CompareTag("trampaDown"))
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
+
+        }
+
+    }
 
 }

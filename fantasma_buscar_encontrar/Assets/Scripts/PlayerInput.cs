@@ -75,7 +75,7 @@ public class PlayerInput : MonoBehaviour
             //moverse humano
         moveValuesP1 = new Vector3(Input_moveP1.ReadValue<Vector2>().x, Input_moveP1.ReadValue<Vector2>().y, 0f);
         P1.transform.position += moveValuesP1 * (velocidadMovimiento * Time.deltaTime);
-        rotatePersonaje(P1anim, moveValuesP1,hitboxP1);
+        rotatePersonaje(P1anim, moveValuesP1, hitboxP1);
 
         if (moveValuesP1.x != 0 || moveValuesP1.y != 0) {
             launch_value_x = moveValuesP1.x;
