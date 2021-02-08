@@ -50,6 +50,12 @@ public class Level2Controller : MonoBehaviour
     public GameObject lobo1;
     public GameObject lobo2;
 
+    public GameObject caminoPasar;
+    public GameObject caidaCambiado;
+    public GameObject caidaCambiado2;
+    public GameObject caidaNormal;
+    public GameObject caidaNormal2;
+
 
     void Update()
     {
@@ -125,6 +131,14 @@ public class Level2Controller : MonoBehaviour
 
             terrenoCambiado.SetActive(true);
             terrenoNormal.SetActive(false);
+
+            caidaCambiado.SetActive(true);
+            caidaCambiado2.SetActive(true);
+            caidaNormal.SetActive(false);
+            caidaNormal2.SetActive(false);
+
+            caminoPasar.SetActive(false);
+
         }
     }
 
@@ -168,8 +182,26 @@ public class Level2Controller : MonoBehaviour
             /*lobo1.SetActive(true);
             lobo2.SetActive(true);*/
 
-            terrenoNormal.SetActive(true);
-            terrenoCambiado.SetActive(false);
+            if (terrenoCambiado.gameObject.activeInHierarchy == true)
+            {
+                terrenoNormal.SetActive(true);
+                terrenoCambiado.SetActive(false);
+
+                caidaCambiado.SetActive(false);
+                caidaCambiado2.SetActive(false);
+                caidaNormal.SetActive(true);
+                caidaNormal2.SetActive(true);
+            }
+            else if (terrenoCambiado.gameObject.activeInHierarchy == false)
+            {
+                terrenoNormal.SetActive(false);
+                terrenoCambiado.SetActive(true);
+
+                caidaCambiado.SetActive(true);
+                caidaCambiado2.SetActive(true);
+                caidaNormal.SetActive(false);
+                caidaNormal2.SetActive(false);
+            }
 
             trigger1.alreadyUsed = true;
         }
@@ -179,8 +211,26 @@ public class Level2Controller : MonoBehaviour
     {
         if (trigger2.firstActivated == true)
         {
-            terrenoCambiado.SetActive(true);
-            terrenoNormal.SetActive(false);
+            if (terrenoCambiado.gameObject.activeInHierarchy == true)
+            {
+                terrenoNormal.SetActive(true);
+                terrenoCambiado.SetActive(false);
+
+                caidaCambiado.SetActive(false);
+                caidaCambiado2.SetActive(false);
+                caidaNormal.SetActive(true);
+                caidaNormal2.SetActive(true);
+            }
+            else if (terrenoCambiado.gameObject.activeInHierarchy == false)
+            {
+                terrenoNormal.SetActive(false);
+                terrenoCambiado.SetActive(true);
+
+                caidaCambiado.SetActive(true);
+                caidaCambiado2.SetActive(true);
+                caidaNormal.SetActive(false);
+                caidaNormal2.SetActive(false);
+            }
 
             trigger2.alreadyUsed = true;
         }
@@ -195,11 +245,21 @@ public class Level2Controller : MonoBehaviour
             {
                 terrenoNormal.SetActive(true);
                 terrenoCambiado.SetActive(false);
+
+                caidaCambiado.SetActive(false);
+                caidaCambiado2.SetActive(false);
+                caidaNormal.SetActive(true);
+                caidaNormal2.SetActive(true);
             }
             else if (terrenoCambiado.gameObject.activeInHierarchy == false)
             {
                 terrenoNormal.SetActive(false);
                 terrenoCambiado.SetActive(true);
+
+                caidaCambiado.SetActive(true);
+                caidaCambiado2.SetActive(true);
+                caidaNormal.SetActive(false);
+                caidaNormal2.SetActive(false);
             }
 
             trigger3.alreadyUsed = true;
@@ -214,11 +274,21 @@ public class Level2Controller : MonoBehaviour
             {
                 terrenoNormal.SetActive(true);
                 terrenoCambiado.SetActive(false);
+
+                caidaCambiado.SetActive(false);
+                caidaCambiado2.SetActive(false);
+                caidaNormal.SetActive(true);
+                caidaNormal2.SetActive(true);
             }
             else if (terrenoCambiado.gameObject.activeInHierarchy == false)
             {
                 terrenoNormal.SetActive(false);
                 terrenoCambiado.SetActive(true);
+
+                caidaCambiado.SetActive(true);
+                caidaCambiado2.SetActive(true);
+                caidaNormal.SetActive(false);
+                caidaNormal2.SetActive(false);
             }
 
             trigger4.alreadyUsed = true;

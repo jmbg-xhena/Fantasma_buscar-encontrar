@@ -47,7 +47,7 @@ public class fantasma : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.CompareTag("trampa") || collision.transform.CompareTag("trampaUp") || collision.transform.CompareTag("trampaDown"))
+        if (collision.transform.CompareTag("trampa") && collision.gameObject.GetComponent<trampa>().impactoConPiedra == false || collision.transform.CompareTag("trampaUp") && collision.gameObject.GetComponent<trampa>().impactoConPiedra == false || collision.transform.CompareTag("trampaDown") && collision.gameObject.GetComponent<trampa>().impactoConPiedra == false)
         {
             anim.SetTrigger("dead");
         }

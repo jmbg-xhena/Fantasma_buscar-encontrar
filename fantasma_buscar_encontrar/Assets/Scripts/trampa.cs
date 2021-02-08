@@ -10,6 +10,8 @@ public class trampa : MonoBehaviour
     public GameObject colAmelia;
     public GameObject colAron;
 
+    public bool impactoConPiedra = false; 
+
     bool activated = false;
 
     // Start is called before the first frame update
@@ -22,14 +24,25 @@ public class trampa : MonoBehaviour
         colAron = GameObject.FindGameObjectWithTag("Aron");
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.transform.CompareTag("piedra"))
+        {
+            impactoConPiedra = true;
+
+            gameObject.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.None;
+            anim.SetBool("Activate", true);
+            activated = true;
+            collision.GetComponentInParent<Rigidbody2D>().velocity = Vector2.zero;
+        }
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
         if(activated == false)
         {
+
             if (collision.transform.CompareTag("Amelia") || collision.transform.CompareTag("Aron"))
             {
                 gameObject.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.None;
@@ -59,17 +72,6 @@ public class trampa : MonoBehaviour
                 print("destruye aron");
                 //Mata a Aron
             }
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.transform.CompareTag("piedra"))
-        {
-            gameObject.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.None;
-            anim.SetBool("Activate", true);
-            activated = true;
-            collision.GetComponentInParent<Rigidbody2D>().velocity = Vector2.zero;
         }
     }
 
