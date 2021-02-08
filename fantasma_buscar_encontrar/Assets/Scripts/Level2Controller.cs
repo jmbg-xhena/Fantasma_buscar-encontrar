@@ -165,8 +165,8 @@ public class Level2Controller : MonoBehaviour
     {
         if (trigger1.firstActivated == true)
         {
-            lobo1.SetActive(true);
-            lobo2.SetActive(true);
+            /*lobo1.SetActive(true);
+            lobo2.SetActive(true);*/
 
             terrenoNormal.SetActive(true);
             terrenoCambiado.SetActive(false);

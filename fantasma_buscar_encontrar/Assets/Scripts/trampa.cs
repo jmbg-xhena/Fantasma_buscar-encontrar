@@ -62,6 +62,17 @@ public class trampa : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.CompareTag("piedra"))
+        {
+            gameObject.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.None;
+            anim.SetBool("Activate", true);
+            activated = true;
+            collision.GetComponentInParent<Rigidbody2D>().velocity = Vector2.zero;
+        }
+    }
+
     IEnumerator DestruirPalo()
     {
         yield return new WaitForSeconds(0.5f);
@@ -74,13 +85,5 @@ public class trampa : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.transform.CompareTag("piedra")) {
-            gameObject.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.None;
-            anim.SetBool("Activate", true);
-            activated = true;
-            collision.GetComponentInParent<Rigidbody2D>().velocity = Vector2.zero;
-        }
-    }
+
 }

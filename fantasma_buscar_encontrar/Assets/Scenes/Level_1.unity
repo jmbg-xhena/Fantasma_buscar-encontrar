@@ -358,7 +358,7 @@ PrefabInstance:
     - target: {fileID: 1525508925648453004, guid: d2625d7a7d3bed14f975c6b4f99df4ed,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8218062
+      value: -1.19
       objectReference: {fileID: 0}
     - target: {fileID: 1525508925648453004, guid: d2625d7a7d3bed14f975c6b4f99df4ed,
         type: 3}
@@ -58714,7 +58714,7 @@ PrefabInstance:
     - target: {fileID: 1525508925648453004, guid: d2625d7a7d3bed14f975c6b4f99df4ed,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.927298
+      value: -20.14
       objectReference: {fileID: 0}
     - target: {fileID: 1525508925648453004, guid: d2625d7a7d3bed14f975c6b4f99df4ed,
         type: 3}
@@ -59371,12 +59371,12 @@ PrefabInstance:
     - target: {fileID: 1525508925648453004, guid: d2625d7a7d3bed14f975c6b4f99df4ed,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.927298
+      value: -13.23
       objectReference: {fileID: 0}
     - target: {fileID: 1525508925648453004, guid: d2625d7a7d3bed14f975c6b4f99df4ed,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.5680895
+      value: -2.13
       objectReference: {fileID: 0}
     - target: {fileID: 1525508925648453004, guid: d2625d7a7d3bed14f975c6b4f99df4ed,
         type: 3}
@@ -59574,6 +59574,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lobo_Blanco
+      objectReference: {fileID: 0}
+    - target: {fileID: 4255301535360124383, guid: 9255d7fe2c902ff499f8f2d7acf59f77,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7550881774410340916, guid: 9255d7fe2c902ff499f8f2d7acf59f77,
         type: 3}
