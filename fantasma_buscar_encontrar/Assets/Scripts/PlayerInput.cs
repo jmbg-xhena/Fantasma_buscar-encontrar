@@ -74,19 +74,25 @@ public class PlayerInput : MonoBehaviour
         ///inputs
             //moverse humano
         moveValuesP1 = new Vector3(Input_moveP1.ReadValue<Vector2>().x, Input_moveP1.ReadValue<Vector2>().y, 0f);
-        P1.transform.position += moveValuesP1 * (velocidadMovimiento * Time.deltaTime);
-        rotatePersonaje(P1anim, moveValuesP1, hitboxP1);
+        if (!P1anim.GetBool("IsAttacking"))
+        {
+            P1.transform.position += moveValuesP1 * (velocidadMovimiento * Time.deltaTime);
+            rotatePersonaje(P1anim, moveValuesP1, hitboxP1);
 
-        if (moveValuesP1.x != 0 || moveValuesP1.y != 0) {
-            launch_value_x = moveValuesP1.x;
-            launch_value_y = moveValuesP1.y;
+            if (moveValuesP1.x != 0 || moveValuesP1.y != 0)
+            {
+                launch_value_x = moveValuesP1.x;
+                launch_value_y = moveValuesP1.y;
+            }
         }
 
         //moverse fantasma
         moveValuesP2 = new Vector3(Input_moveP2.ReadValue<Vector2>().x, Input_moveP2.ReadValue<Vector2>().y, 0f);
-        P2.transform.position += moveValuesP2 * (velocidadMovimiento * Time.deltaTime);
-        rotatePersonaje(P2anim, moveValuesP2,hitboxP2);
-
+        if (!P2anim.GetBool("IsAttacking"))
+        {
+            P2.transform.position += moveValuesP2 * (velocidadMovimiento * Time.deltaTime);
+            rotatePersonaje(P2anim, moveValuesP2, hitboxP2);
+        }
             //destruir trampas
         if (Input_accionP1.ReadValue<float>()==1&&CanAccionP1) {
             CanAccionP1 = false;
@@ -165,84 +171,89 @@ public class PlayerInput : MonoBehaviour
 
 
     //rotar personajes dependiendo de la diercción de movimiento
-    void rotatePersonaje(Animator anim, Vector3 moveValues, GameObject hbox) {
-        anim.SetFloat("SpeedX", moveValues.x);
-        anim.SetFloat("SpeedY", moveValues.y);
-        if (moveValues.x != 0 || moveValues.y != 0)
+    void rotatePersonaje(Animator anim, Vector3 moveValues, GameObject hbox)
+    {
+        if (!anim.GetBool("IsAttacking"))
         {
-            anim.SetBool("IsMoving", true);
-        }
-        else {
-            anim.SetBool("IsMoving", false);
-        }
-
-        if (moveValues == Vector3.up)
-        {
-            
-            anim.SetInteger("IsLookingAt", 1);
-            if (!hbox.CompareTag("arma_aron"))
+            anim.SetFloat("SpeedX", moveValues.x);
+            anim.SetFloat("SpeedY", moveValues.y);
+            if (moveValues.x != 0 || moveValues.y != 0)
             {
-                hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 0f));
-
+                anim.SetBool("IsMoving", true);
             }
-        }
-        if (moveValues == Vector3.down)
-        {
-            anim.SetInteger("IsLookingAt", 3);
-            if (!hbox.CompareTag("arma_aron"))
+            else
             {
-                hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 180f));
-
+                anim.SetBool("IsMoving", false);
             }
-        }
-        if (moveValues == Vector3.left)
-        {
-            anim.SetInteger("IsLookingAt", 2);
-            if (!hbox.CompareTag("arma_aron"))
-            {
-                hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 90f));
 
+            if (moveValues == Vector3.up)
+            {
+
+                anim.SetInteger("IsLookingAt", 1);
+                if (!hbox.CompareTag("arma_aron"))
+                {
+                    hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 0f));
+
+                }
             }
-        }
-        if (moveValues == Vector3.right)
-        {
-            anim.SetInteger("IsLookingAt", 4);
-            if (!hbox.CompareTag("arma_aron"))
+            if (moveValues == Vector3.down)
             {
-                hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, -90f));
+                anim.SetInteger("IsLookingAt", 3);
+                if (!hbox.CompareTag("arma_aron"))
+                {
+                    hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 180f));
 
+                }
             }
-        }
-        if (moveValues.x>0 && moveValues.x < 1 && moveValues.y > 0 && moveValues.y < 1)
-        {
-            if (!hbox.CompareTag("arma_aron"))
+            if (moveValues == Vector3.left)
             {
-                hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, -45f));
+                anim.SetInteger("IsLookingAt", 2);
+                if (!hbox.CompareTag("arma_aron"))
+                {
+                    hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 90f));
 
+                }
             }
-        }
-        if (moveValues.x < 0 && moveValues.x > -1 && moveValues.y > 0 && moveValues.y < 1)
-        {
-            if (!hbox.CompareTag("arma_aron"))
+            if (moveValues == Vector3.right)
             {
-                hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 45f));
+                anim.SetInteger("IsLookingAt", 4);
+                if (!hbox.CompareTag("arma_aron"))
+                {
+                    hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, -90f));
 
+                }
             }
-        }
-        if (moveValues.x < 0 && moveValues.x > -1 && moveValues.y < 0 && moveValues.y > -1)
-        {
-            if (!hbox.CompareTag("arma_aron"))
+            if (moveValues.x > 0 && moveValues.x < 1 && moveValues.y > 0 && moveValues.y < 1)
             {
-            hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 135f));
+                if (!hbox.CompareTag("arma_aron"))
+                {
+                    hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, -45f));
 
+                }
             }
-        }
-        if (moveValues.x > 0 && moveValues.x < 1 && moveValues.y < 0 && moveValues.y > -1)
-        {
-            if (!hbox.CompareTag("arma_aron"))
+            if (moveValues.x < 0 && moveValues.x > -1 && moveValues.y > 0 && moveValues.y < 1)
             {
-                hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, -135));
+                if (!hbox.CompareTag("arma_aron"))
+                {
+                    hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 45f));
 
+                }
+            }
+            if (moveValues.x < 0 && moveValues.x > -1 && moveValues.y < 0 && moveValues.y > -1)
+            {
+                if (!hbox.CompareTag("arma_aron"))
+                {
+                    hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, 135f));
+
+                }
+            }
+            if (moveValues.x > 0 && moveValues.x < 1 && moveValues.y < 0 && moveValues.y > -1)
+            {
+                if (!hbox.CompareTag("arma_aron"))
+                {
+                    hbox.transform.rotation = Quaternion.Euler(new Vector3(hbox.transform.rotation.x, hbox.transform.rotation.y, -135));
+
+                }
             }
         }
     }
