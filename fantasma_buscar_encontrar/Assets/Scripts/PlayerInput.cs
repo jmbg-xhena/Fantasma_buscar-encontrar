@@ -94,7 +94,7 @@ public class PlayerInput : MonoBehaviour
             rotatePersonaje(P2anim, moveValuesP2, hitboxP2);
         }
             //destruir trampas
-        if (Input_accionP1.ReadValue<float>()==1&&CanAccionP1) {
+        if (Input_accionP1.ReadValue<float>()==1&&CanAccionP1 && !P1anim.GetBool("Water")) {
             CanAccionP1 = false;
             P1anim.SetBool("IsAttacking", true);
             print("ataque rama/piedra");
@@ -138,7 +138,7 @@ public class PlayerInput : MonoBehaviour
 
         }
 
-        if (Lanzar_piedra.ReadValue<float>() == 1 && CanAccionP1 && P1.GetComponent<humano>().stone == true)
+        if (Lanzar_piedra.ReadValue<float>() == 1 && CanAccionP1 && P1.GetComponent<humano>().stone == true && !P1anim.GetBool("Water"))
         {
             CanAccionP1 = false;
             Invoke("activarAccionP1", coolDownAcciones);
