@@ -7,6 +7,7 @@ public class espectro : MonoBehaviour
     public float t = 0;
     public bool chocando;
     public float xScale;
+    public float velocidad = 1;
     // Start is called before the first frame update
     void Start()
     {

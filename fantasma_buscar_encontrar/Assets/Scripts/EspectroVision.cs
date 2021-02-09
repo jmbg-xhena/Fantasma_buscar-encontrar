@@ -34,11 +34,7 @@ public class EspectroVision : MonoBehaviour
                 {
                     transform.localScale = new Vector3(-miEspectroScript.xScale, transform.localScale.y, transform.localScale.z);
                 }
-                miEspectroScript.t += 0.00008f;
-                if (miEspectroScript.t > 0.001f)
-                {
-                    miEspectroScript.t = 0.01f;
-                }
+                miEspectroScript.t = 0.01f * miEspectroScript.velocidad;
                 elEspectro.transform.position = Vector3.MoveTowards(elEspectro.transform.position, collision.transform.position, miEspectroScript.t);
             }
         }

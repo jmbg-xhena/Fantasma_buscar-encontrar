@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0daafa59b5c0634e9fce15b7bdb2800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  miEspectro: {fileID: 2026325626}
+  miEspectroScript: {fileID: 2026325626}
   elEspectro: {fileID: 6571122175963075925}
 --- !u!1 &6571122175963075925
 GameObject:
@@ -221,6 +221,7 @@ MonoBehaviour:
   t: 0
   chocando: 0
   xScale: 0
+  velocidad: 10
 --- !u!50 &3028280131291451364
 Rigidbody2D:
   serializedVersion: 4
