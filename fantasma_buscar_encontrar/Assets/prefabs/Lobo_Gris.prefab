@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 1677046496525529212}
   - component: {fileID: 3036681156966533986}
   - component: {fileID: 9149671287026270845}
-  - component: {fileID: 1842133599396111868}
-  - component: {fileID: 1033690469540551078}
   - component: {fileID: 4207735779730367883}
   - component: {fileID: -6483666629000591581}
+  - component: {fileID: 641485588}
   m_Layer: 13
   m_Name: Lobo_Gris
   m_TagString: lobo
@@ -106,44 +105,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &1842133599396111868
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 906316940598456362}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 4.6874623, y: -0.000000558789}
-  m_Size: {x: 5.625253, y: 1.890047}
-  m_Direction: 1
---- !u!114 &1033690469540551078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 906316940598456362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2fa32a6517fcc34eb6a27159949b69c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  t: 0
-  xScale: 0
-  initY: 0
-  amelia_entra: 0
-  aron_entra: 0
-  objeto_col: {fileID: 0}
-  direccion: 1
-  caminando: 1
-  atacando: 0
-  velocidad: 0.5
 --- !u!70 &4207735779730367883
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -154,7 +115,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -181,3 +142,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &641485588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906316940598456362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03542f59e7ee79c40b1f904dae9ce80e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  t: 0
+  chocando: 0
+  xScale: 0
+  velocidad: 2.5
+  scared: 0
+  posAron: {fileID: 0}
+  posAmelia: {fileID: 0}

@@ -7,11 +7,6 @@ public class EspectroVision : MonoBehaviour
     public espectro miEspectroScript;
     public GameObject elEspectro;
 
-    private void Start()
-    {
-
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.CompareTag("Aron"))

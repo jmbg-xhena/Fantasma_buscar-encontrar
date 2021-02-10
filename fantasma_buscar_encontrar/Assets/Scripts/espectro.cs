@@ -8,16 +8,10 @@ public class espectro : MonoBehaviour
     public bool chocando;
     public float xScale;
     public float velocidad = 1;
-    // Start is called before the first frame update
+
     void Start()
     {
         xScale = transform.localScale.x;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -26,12 +20,6 @@ public class espectro : MonoBehaviour
         {
             gameObject.GetComponent<Animator>().SetTrigger("muerto");
         }
-    }
-
-    
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
         if (collision.transform.CompareTag("Aron"))
         {
             chocando = true;
@@ -40,12 +28,7 @@ public class espectro : MonoBehaviour
         }
     }
 
-    public void destroy()
-    {
-        Destroy(this.gameObject);   
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.transform.CompareTag("Aron"))
         {
@@ -53,4 +36,10 @@ public class espectro : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("Consuming", false);
         }
     }
+
+    public void destroy()
+    {
+        Destroy(this.gameObject);
+    }
+
 }
