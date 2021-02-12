@@ -31,7 +31,7 @@ public class PerseguirLobo : MonoBehaviour
                     {
                         elLobo.GetComponent<SpriteRenderer>().flipX = false;
                     }
-                    miLoboScript.t = 0.01f * miLoboScript.velocidad;
+                    miLoboScript.t = 1f * miLoboScript.velocidad;
                     elLobo.transform.position = Vector3.MoveTowards(elLobo.transform.position, collision.transform.position, miLoboScript.t);
                 }
             }

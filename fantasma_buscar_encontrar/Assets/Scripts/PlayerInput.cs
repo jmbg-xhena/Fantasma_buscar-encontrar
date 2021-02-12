@@ -12,6 +12,7 @@ public class PlayerInput : MonoBehaviour
     public InputAction Input_moveP1;
     public InputAction Input_accionP1;
     public InputAction Input_interaccionP1;
+    public InputAction PauseButton;
     private bool CanAccionP1;
     public Vector3 moveValuesP1;
     public InputAction Input_moveP2;
@@ -27,6 +28,7 @@ public class PlayerInput : MonoBehaviour
     public float launch_force=10;
     private float launch_value_x;
     private float launch_value_y;
+    public bool paused = false;
 
     private Animator P1anim;
     private Animator P2anim;
@@ -39,6 +41,7 @@ public class PlayerInput : MonoBehaviour
         Input_accionP2.Enable();
         Input_interaccionP1.Enable();
         Lanzar_piedra.Enable();
+        PauseButton.Enable();
     }
 
     private void OnDisable()
@@ -49,6 +52,7 @@ public class PlayerInput : MonoBehaviour
         Input_accionP2.Disable();
         Input_interaccionP1.Disable();
         Lanzar_piedra.Disable();
+        PauseButton.Disable();
     }
 
     // Start is called before the first frame update
@@ -72,6 +76,22 @@ public class PlayerInput : MonoBehaviour
     void Update()
     {
         ///inputs
+        ///
+
+        //Pausar Juego
+        if (PauseButton.triggered)
+        {
+            print("PAUSAAAAA");
+            if (paused == false)
+            {
+                PauseGame();
+            }
+            else if (paused == true)
+            {
+                ResumeGame();
+            }
+        }
+
             //moverse humano
         moveValuesP1 = new Vector3(Input_moveP1.ReadValue<Vector2>().x, Input_moveP1.ReadValue<Vector2>().y, 0f);
         if (!P1anim.GetBool("IsAttacking"))
@@ -257,4 +277,17 @@ public class PlayerInput : MonoBehaviour
             }
         }
     }
+
+    void PauseGame()
+    {
+        Time.timeScale = 0;
+        paused = true;
+    }
+
+    void ResumeGame()
+    {
+        Time.timeScale = 1;
+        paused = false;
+    }
+
 }

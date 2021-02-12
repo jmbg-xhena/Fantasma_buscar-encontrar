@@ -30,13 +30,16 @@ public class LoboStatus : MonoBehaviour
             {
                 if (transform.position.x < posAron.transform.position.x)
                 {
-                    this.GetComponent<SpriteRenderer>().flipX = false;
+                    //this.GetComponent<SpriteRenderer>().flipX = false;
+                    this.gameObject.transform.localScale = new Vector3(xScale, transform.localScale.y, transform.localScale.z );
                 }
                 else if (transform.position.x > posAron.transform.position.x)
                 {
-                    this.GetComponent<SpriteRenderer>().flipX = true;
+                    //this.GetComponent<SpriteRenderer>().flipX = true;
+                    this.gameObject.transform.localScale = new Vector3(-xScale, transform.localScale.y, transform.localScale.z);
+
                 }
-                t = 0.01f * velocidad;
+                t = 1f * velocidad * Time.deltaTime;
                 transform.position = Vector3.MoveTowards(transform.position, -posAron.transform.position, t);
             }
         }
@@ -46,13 +49,17 @@ public class LoboStatus : MonoBehaviour
             {
                 if (transform.position.x < posAmelia.transform.position.x)
                 {
-                    GetComponent<SpriteRenderer>().flipX = true;
+                    //GetComponent<SpriteRenderer>().flipX = true;
+                    this.gameObject.transform.localScale = new Vector3(xScale, transform.localScale.y, transform.localScale.z);
+
                 }
                 else if (transform.position.x > posAmelia.transform.position.x)
                 {
-                    GetComponent<SpriteRenderer>().flipX = false;
+                    //GetComponent<SpriteRenderer>().flipX = false;
+                    this.gameObject.transform.localScale = new Vector3(-xScale, transform.localScale.y, transform.localScale.z);
+
                 }
-                t = 0.01f * velocidad;
+                t = 1f * velocidad * Time.deltaTime;
                 transform.position = Vector3.MoveTowards(transform.position, posAmelia.transform.position, t);
             }
         }

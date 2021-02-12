@@ -126,6 +126,22 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Input_interaccion P1
       m_Flags: 0
+  PauseButton:
+    m_Name: Pause Button
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: 587ee8b1-f5d6-4803-a392-a704d8ed987a
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 6285e872-6e63-4b84-accc-1a0afcc1c3e9
+      m_Path: <Keyboard>/p
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Pause Button
+      m_Flags: 0
   moveValuesP1: {x: 0, y: 0, z: 0}
   Input_moveP2:
     m_Name: Input_move P2
@@ -210,3 +226,4 @@ MonoBehaviour:
   velocidadMovimiento: 1.5
   piedra: {fileID: 3790238246453749503, guid: 5faa40930dcf91940b098d48d1289c1a, type: 3}
   launch_force: 300
+  paused: 0
