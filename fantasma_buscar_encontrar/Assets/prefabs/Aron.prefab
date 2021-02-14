@@ -232,7 +232,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ded07201dbb4840b6b62ccf9f57796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pinput: {fileID: 0}
   hbox: {fileID: 5332639301636655972}
+  aud: {fileID: 0}
+  hierba:
+  - {fileID: 8300000, guid: f9e8fe9ef4e47894283afbdc6ad218fc, type: 3}
+  - {fileID: 8300000, guid: 90712e37f0edcfa4792ccc00864c7191, type: 3}
+  - {fileID: 8300000, guid: 3822a705a1bc94d4ba81379a81b7bc0f, type: 3}
+  - {fileID: 8300000, guid: 441b987cd65290c46af7c00a59127934, type: 3}
+  camino:
+  - {fileID: 8300000, guid: 545833d06be653048bbd7cd5abdf3582, type: 3}
+  - {fileID: 8300000, guid: 0a755135b0926f346bbd090b279ac794, type: 3}
+  - {fileID: 8300000, guid: 06efb6678e9de124abd29b13cf84fc3f, type: 3}
+  - {fileID: 8300000, guid: a56dd87b5a1730d44ba6f8e00912cb33, type: 3}
+  frecuencia_pasos: 0.5
+  caminando: 0
+  terreno: 
   spriteRenderer: {fileID: 1177996511597271823}
 --- !u!50 &1177996513088058195
 Rigidbody2D:

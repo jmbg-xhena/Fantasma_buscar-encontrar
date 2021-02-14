@@ -441,11 +441,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d41c65d16ca3e748a969efe19db9208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pinput: {fileID: 0}
   no_llaves: 0
   no_paginas: 0
   stick: 0
   stone: 0
   agarrarObjeto: 0
+  aud: {fileID: 0}
+  hierba:
+  - {fileID: 8300000, guid: f9e8fe9ef4e47894283afbdc6ad218fc, type: 3}
+  - {fileID: 8300000, guid: 90712e37f0edcfa4792ccc00864c7191, type: 3}
+  - {fileID: 8300000, guid: 3822a705a1bc94d4ba81379a81b7bc0f, type: 3}
+  - {fileID: 8300000, guid: 441b987cd65290c46af7c00a59127934, type: 3}
+  camino:
+  - {fileID: 8300000, guid: 545833d06be653048bbd7cd5abdf3582, type: 3}
+  - {fileID: 8300000, guid: 0a755135b0926f346bbd090b279ac794, type: 3}
+  - {fileID: 8300000, guid: 06efb6678e9de124abd29b13cf84fc3f, type: 3}
+  - {fileID: 8300000, guid: a56dd87b5a1730d44ba6f8e00912cb33, type: 3}
+  wMovement: {fileID: 8300000, guid: f34cf2b5240bc044097a8c322024c741, type: 3}
+  wSplash: {fileID: 8300000, guid: 4f86b9ac0b1335846a76405a49f64830, type: 3}
+  frecuencia_pasos: 0.1
+  caminando: 0
+  terreno: 
   hbox: {fileID: 3086827847848233442}
 --- !u!70 &7832519642082316537
 CapsuleCollider2D:

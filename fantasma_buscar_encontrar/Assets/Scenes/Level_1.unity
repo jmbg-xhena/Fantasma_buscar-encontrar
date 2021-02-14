@@ -246,7 +246,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8ee7e90679538d84fa192104ede4c4cf, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
@@ -557,55 +557,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2f31fa21f48d8d4bb0ce92adf7f9cb1, type: 3}
---- !u!1 &237615366
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!82 &237615369 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1681547950016576537, guid: b3ecea6100dda194989c9321764ca634,
+    type: 3}
+  m_PrefabInstance: {fileID: 1681547949985727760}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 237615367}
-  - component: {fileID: 237615368}
-  m_Layer: 0
-  m_Name: LevelController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &237615367
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 237615366}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.57, y: -1.35, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &237615368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 237615366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cdd0a85b1eb13e418cf81ba687ed9d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monolitoAron: {fileID: 361060693}
-  monolitoAmelia: {fileID: 1208851346}
-  boton1: {fileID: 874931900}
-  boton2: {fileID: 397373823}
-  puerta1: {fileID: 332027206}
-  puertaSalida: {fileID: 419951908}
 --- !u!1001 &247445917
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45555,9 +45512,9 @@ GameObject:
   - component: {fileID: 456802963}
   - component: {fileID: 456802962}
   - component: {fileID: 456802961}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Tilemap hierva
-  m_TagString: awa
+  m_TagString: hierba
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60875,6 +60832,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1177996513088058197, guid: 7bce7f831fa51f14e86bf89287f2286e,
+        type: 3}
+      propertyPath: aud
+      value: 
+      objectReference: {fileID: 237615369}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bce7f831fa51f14e86bf89287f2286e, type: 3}
 --- !u!4 &1354587708 stripped
@@ -65573,6 +65535,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 313780908}
     m_Modifications:
+    - target: {fileID: 4054292434034152854, guid: 09dfadeaa97e8c140b3d3660ef174cff,
+        type: 3}
+      propertyPath: aud
+      value: 
+      objectReference: {fileID: 237615369}
     - target: {fileID: 4054292434034152873, guid: 09dfadeaa97e8c140b3d3660ef174cff,
         type: 3}
       propertyPath: m_Name
@@ -66475,6 +66442,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Players controler
       objectReference: {fileID: 0}
+    - target: {fileID: 6811974312754972988, guid: 17fb3aa094a85e8409dd717d7bc705d4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pcontroler
+      objectReference: {fileID: 0}
     - target: {fileID: 6811974312754972990, guid: 17fb3aa094a85e8409dd717d7bc705d4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -66915,9 +66887,9 @@ GameObject:
   - component: {fileID: 1995678598}
   - component: {fileID: 1995678597}
   - component: {fileID: 1995678596}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Tilemap camino
-  m_TagString: awa
+  m_TagString: camino
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68831,6 +68803,105 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01d257cda809aa040b171081c86630e1, type: 3}
+--- !u!1001 &1681547949985727760
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1681547950016576534, guid: b3ecea6100dda194989c9321764ca634,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelController
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681547950016576535, guid: b3ecea6100dda194989c9321764ca634,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681547950016576535, guid: b3ecea6100dda194989c9321764ca634,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681547950016576535, guid: b3ecea6100dda194989c9321764ca634,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681547950016576535, guid: b3ecea6100dda194989c9321764ca634,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681547950016576535, guid: b3ecea6100dda194989c9321764ca634,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681547950016576535, guid: b3ecea6100dda194989c9321764ca634,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681547950016576535, guid: b3ecea6100dda194989c9321764ca634,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681547950016576535, guid: b3ecea6100dda194989c9321764ca634,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681547950016576535, guid: b3ecea6100dda194989c9321764ca634,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681547950016576535, guid: b3ecea6100dda194989c9321764ca634,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681547950016576535, guid: b3ecea6100dda194989c9321764ca634,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681547950016576536, guid: b3ecea6100dda194989c9321764ca634,
+        type: 3}
+      propertyPath: monolitoAron
+      value: 
+      objectReference: {fileID: 361060693}
+    - target: {fileID: 1681547950016576536, guid: b3ecea6100dda194989c9321764ca634,
+        type: 3}
+      propertyPath: monolitoAmelia
+      value: 
+      objectReference: {fileID: 1208851346}
+    - target: {fileID: 1681547950016576536, guid: b3ecea6100dda194989c9321764ca634,
+        type: 3}
+      propertyPath: boton1
+      value: 
+      objectReference: {fileID: 874931900}
+    - target: {fileID: 1681547950016576536, guid: b3ecea6100dda194989c9321764ca634,
+        type: 3}
+      propertyPath: boton2
+      value: 
+      objectReference: {fileID: 397373823}
+    - target: {fileID: 1681547950016576536, guid: b3ecea6100dda194989c9321764ca634,
+        type: 3}
+      propertyPath: puerta1
+      value: 
+      objectReference: {fileID: 332027206}
+    - target: {fileID: 1681547950016576536, guid: b3ecea6100dda194989c9321764ca634,
+        type: 3}
+      propertyPath: puertaSalida
+      value: 
+      objectReference: {fileID: 419951908}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b3ecea6100dda194989c9321764ca634, type: 3}
 --- !u!1001 &3623002705654567146
 PrefabInstance:
   m_ObjectHideFlags: 0

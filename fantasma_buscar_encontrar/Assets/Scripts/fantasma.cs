@@ -5,8 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class fantasma : MonoBehaviour
 {
+    public PlayerInput Pinput;
     private Animator anim;
     public GameObject hbox;
+    public AudioSource aud;
+    public AudioClip[] hierba;
+    public AudioClip[] camino;
+    public float frecuencia_pasos = 0.1f;//frecuencia en la que se va a reproducir el sonido de los pasos
+    public bool caminando=false;
+    private int index_random = 0;
+    public string terreno="";
 
     public SpriteRenderer spriteRenderer;
 
@@ -17,6 +25,8 @@ public class fantasma : MonoBehaviour
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
+        Pinput = GameObject.FindGameObjectWithTag("Pcontroler").GetComponent<PlayerInput>();
+        aud = GameObject.FindGameObjectWithTag("Lcontroler").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -54,5 +64,56 @@ public class fantasma : MonoBehaviour
         if (collision.transform.CompareTag("vacio")) {
             anim.SetTrigger("fall");
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.CompareTag("camino"))
+        {
+            index_random = Random.Range(0, 3);
+            aud.PlayOneShot(camino[index_random]);
+        }
+        if (collision.transform.CompareTag("hierba"))
+        {
+            index_random = Random.Range(0, 3);
+            aud.PlayOneShot(hierba[index_random]);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (Pinput.Input_moveP2.ReadValue<Vector2>().x != 0 || Pinput.Input_moveP2.ReadValue<Vector2>().y != 0)
+        {
+            if (collision.transform.CompareTag("camino"))
+            {
+                frecuencia_pasos = 0.5f;
+                if (!caminando)
+                {
+                    caminando = true;
+                    index_random = Random.Range(0, 3);
+                    aud.PlayOneShot(camino[index_random]);
+                    CancelInvoke("darPaso");
+                    Invoke("darPaso", frecuencia_pasos);
+                }
+            }
+            if (collision.transform.CompareTag("hierba"))
+            {
+                frecuencia_pasos = 0.65f;
+                if (!caminando)
+                {
+                    caminando = true;
+                    index_random = Random.Range(0, 3);
+                    aud.PlayOneShot(hierba[index_random]);
+                    Invoke("darPaso", frecuencia_pasos);
+                }
+            }
+        }
+        else {
+            
+        }
+    }
+
+    public void darPaso() {
+        caminando = false;
     }
 }
