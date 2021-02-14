@@ -13,13 +13,22 @@ public class LoboStatus : MonoBehaviour
     public Transform posAron;
     public Transform posAmelia;
 
+    public AudioClip miedo;
+    public AudioClip ataque;
+    public AudioClip aullido;
+
+    private AudioSource audioLobos;
+
     void Start()
     {
+
+        audioLobos = GetComponent<AudioSource>();
         posAron = GameObject.FindGameObjectWithTag("Aron").transform;
         posAmelia = GameObject.FindGameObjectWithTag("Amelia").transform;
         xScale = transform.localScale.x;
         t = 0;
-
+        audioLobos.clip = aullido;
+        audioLobos.Play();
     }
 
     private void Update()
@@ -41,6 +50,7 @@ public class LoboStatus : MonoBehaviour
                 }
                 t = 1f * velocidad * Time.deltaTime;
                 transform.position = Vector3.MoveTowards(transform.position, -posAron.transform.position, t);
+                
             }
         }
         else if (scared == false)
@@ -71,12 +81,16 @@ public class LoboStatus : MonoBehaviour
         {
             StartCoroutine(WaitToKill());
             scared = true;
+            audioLobos.clip = miedo;
+            audioLobos.Play();
         }
         if (collision.transform.CompareTag("Amelia"))
         {
             chocando = true;
             gameObject.GetComponent<Animator>().SetBool("Attacking", true);
             collision.gameObject.GetComponent<Animator>().SetTrigger("dead");
+            audioLobos.clip = ataque;
+            audioLobos.Play();
         }
     }
 

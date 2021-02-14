@@ -9,9 +9,18 @@ public class espectro : MonoBehaviour
     public float xScale;
     public float velocidad = 1;
 
+    public AudioClip muerte;
+    public AudioClip ataque;
+
+
+    private AudioSource audioEspectro;
+
+
     void Start()
     {
         xScale = transform.localScale.x;
+        audioEspectro = GetComponent<AudioSource>();
+     
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -19,12 +28,17 @@ public class espectro : MonoBehaviour
         if (collision.transform.CompareTag("arma_amelia"))
         {
             gameObject.GetComponent<Animator>().SetTrigger("muerto");
+            audioEspectro.clip = muerte;
+            audioEspectro.Play();
         }
         if (collision.transform.CompareTag("Aron"))
         {
             chocando = true;
             gameObject.GetComponent<Animator>().SetBool("Consuming", true);
             collision.gameObject.GetComponent<Animator>().SetTrigger("dead");
+            audioEspectro.clip = ataque;
+            audioEspectro.Play();
+
         }
     }
 
@@ -34,12 +48,18 @@ public class espectro : MonoBehaviour
         {
             chocando = false;
             gameObject.GetComponent<Animator>().SetBool("Consuming", false);
+
         }
     }
 
     public void destroy()
     {
-        Destroy(this.gameObject);
+        StartCoroutine(TiempoDeMuerte());
     }
 
+    IEnumerator TiempoDeMuerte()
+    {
+        yield return new WaitForSeconds(audioEspectro.time + .1f);
+        Destroy(this.gameObject);
+    }
 }

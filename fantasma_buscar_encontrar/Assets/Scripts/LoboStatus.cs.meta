@@ -3,7 +3,12 @@ guid: 03542f59e7ee79c40b1f904dae9ce80e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - posAron: {instanceID: 0}
+  - posAmelia: {instanceID: 0}
+  - miedo: {fileID: 8300000, guid: 14d120b4e136dea4fbc8b1ecab45feeb, type: 3}
+  - ataque: {fileID: 8300000, guid: 33068f4aa32500841a01401e909f14f1, type: 3}
+  - aullido: {fileID: 8300000, guid: b9342d93d9acf954bb4bb49945034181, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

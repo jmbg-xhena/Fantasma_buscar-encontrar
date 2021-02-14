@@ -20,74 +20,104 @@ public class TumbarTronco : MonoBehaviour
 
     public BoxCollider2D colliderAntes;
 
+    private AudioSource audioTronco;
+
+    private bool activado = false;
+
+    private void Start()
+    {
+        audioTronco = GetComponent<AudioSource>();
+
+    }
+
     void Update()
     {
-        if (triggerIzquierdo.miDireccion == true)
+        if(activado == false)
         {
-            troncoSuperior.transform.position = transformDerecho.position;
-            troncoSuperior.transform.rotation = transformDerecho.rotation;
+            if (triggerIzquierdo.miDireccion == true)
+            {
+                troncoSuperior.transform.position = transformDerecho.position;
+                troncoSuperior.transform.rotation = transformDerecho.rotation;
 
-            colliderAntes.gameObject.SetActive(false);
+                colliderAntes.gameObject.SetActive(false);
 
-            troncoSuperior.GetComponent<SpriteRenderer>().sortingOrder = 1;
+                troncoSuperior.GetComponent<SpriteRenderer>().sortingOrder = 1;
 
-            troncoInferior.GetComponent<BoxCollider2D>().isTrigger = true;
+                troncoInferior.GetComponent<BoxCollider2D>().isTrigger = true;
 
-            triggerIzquierdo.gameObject.SetActive(false);
-            triggerDerecho.gameObject.SetActive(false);
-            triggerArriba.gameObject.SetActive(false);
-            triggerAbajo.gameObject.SetActive(false);
+                triggerIzquierdo.gameObject.SetActive(false);
+                triggerDerecho.gameObject.SetActive(false);
+                triggerArriba.gameObject.SetActive(false);
+                triggerAbajo.gameObject.SetActive(false);
+
+                audioTronco.Play();
+                activado = true;
+
+            }
+            else if (triggerDerecho.miDireccion == true)
+            {
+                troncoSuperior.transform.position = transformIzquierdo.position;
+                troncoSuperior.transform.rotation = transformIzquierdo.rotation;
+
+                colliderAntes.gameObject.SetActive(false);
+
+                troncoSuperior.GetComponent<SpriteRenderer>().sortingOrder = 1;
+
+
+                troncoInferior.GetComponent<BoxCollider2D>().isTrigger = true;
+
+
+                triggerIzquierdo.gameObject.SetActive(false);
+                triggerDerecho.gameObject.SetActive(false);
+                triggerArriba.gameObject.SetActive(false);
+                triggerAbajo.gameObject.SetActive(false);
+
+                audioTronco.Play();
+                activado = true;
+
+            }
+            else if (triggerArriba.miDireccion == true)
+            {
+                troncoSuperior.transform.position = transformAbajo.position;
+                troncoSuperior.transform.rotation = transformAbajo.rotation;
+
+                colliderAntes.gameObject.SetActive(false);
+
+                troncoSuperior.GetComponent<SpriteRenderer>().sortingOrder = 1;
+
+                troncoInferior.GetComponent<BoxCollider2D>().isTrigger = true;
+
+                triggerIzquierdo.gameObject.SetActive(false);
+                triggerDerecho.gameObject.SetActive(false);
+                triggerArriba.gameObject.SetActive(false);
+                triggerAbajo.gameObject.SetActive(false);
+
+                audioTronco.Play();
+                activado = true;
+
+            }
+            else if (triggerAbajo.miDireccion == true)
+            {
+                troncoSuperior.transform.position = transformArriba.position;
+                troncoSuperior.transform.rotation = transformArriba.rotation;
+
+                colliderAntes.gameObject.SetActive(false);
+
+                troncoSuperior.GetComponent<SpriteRenderer>().sortingOrder = 1;
+
+                troncoInferior.GetComponent<BoxCollider2D>().isTrigger = true;
+
+                triggerIzquierdo.gameObject.SetActive(false);
+                triggerDerecho.gameObject.SetActive(false);
+                triggerArriba.gameObject.SetActive(false);
+                triggerAbajo.gameObject.SetActive(false);
+
+                audioTronco.Play();
+                activado = true;
+
+            }
         }
-        else if (triggerDerecho.miDireccion == true)
-        {
-            troncoSuperior.transform.position = transformIzquierdo.position;
-            troncoSuperior.transform.rotation = transformIzquierdo.rotation;
-
-            colliderAntes.gameObject.SetActive(false);
-
-            troncoSuperior.GetComponent<SpriteRenderer>().sortingOrder = 1;
-
-
-            troncoInferior.GetComponent<BoxCollider2D>().isTrigger = true;
-
-
-            triggerIzquierdo.gameObject.SetActive(false);
-            triggerDerecho.gameObject.SetActive(false);
-            triggerArriba.gameObject.SetActive(false);
-            triggerAbajo.gameObject.SetActive(false);
-        }
-        else if(triggerArriba.miDireccion == true)
-        {
-            troncoSuperior.transform.position = transformAbajo.position;
-            troncoSuperior.transform.rotation = transformAbajo.rotation;
-
-            colliderAntes.gameObject.SetActive(false);
-
-            troncoSuperior.GetComponent<SpriteRenderer>().sortingOrder = 1;
-
-            troncoInferior.GetComponent<BoxCollider2D>().isTrigger = true;
-
-            triggerIzquierdo.gameObject.SetActive(false);
-            triggerDerecho.gameObject.SetActive(false);
-            triggerArriba.gameObject.SetActive(false);
-            triggerAbajo.gameObject.SetActive(false);
-        }
-        else if(triggerAbajo.miDireccion == true)
-        {
-            troncoSuperior.transform.position = transformArriba.position;
-            troncoSuperior.transform.rotation = transformArriba.rotation;
-
-            colliderAntes.gameObject.SetActive(false);
-
-            troncoSuperior.GetComponent<SpriteRenderer>().sortingOrder = 1;
-
-            troncoInferior.GetComponent<BoxCollider2D>().isTrigger = true;
-
-            triggerIzquierdo.gameObject.SetActive(false);
-            triggerDerecho.gameObject.SetActive(false);
-            triggerArriba.gameObject.SetActive(false);
-            triggerAbajo.gameObject.SetActive(false);
-        }
+        
     }
 
 }

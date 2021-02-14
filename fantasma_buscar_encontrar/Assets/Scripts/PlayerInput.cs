@@ -33,6 +33,8 @@ public class PlayerInput : MonoBehaviour
     private Animator P1anim;
     private Animator P2anim;
 
+    private AudioSource inpactoPiedra;
+
     private void OnEnable()
     {
         Input_moveP1.Enable();
@@ -70,6 +72,8 @@ public class PlayerInput : MonoBehaviour
         hitboxP2 = P2.GetComponentInChildren<hitbox>().gameObject;
         hitboxP1.SetActive(false);
         hitboxP2.SetActive(false);
+
+        inpactoPiedra = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -166,6 +170,7 @@ public class PlayerInput : MonoBehaviour
             instance = Instantiate(piedra);
             instance.transform.position = P1.transform.position;
             instance.GetComponent<Rigidbody2D>().AddForce(new Vector2(launch_value_x, launch_value_y)*launch_force);
+            StartCoroutine(Piedra());
         }
 
             ///
@@ -290,4 +295,9 @@ public class PlayerInput : MonoBehaviour
         paused = false;
     }
 
+    IEnumerator Piedra ()
+    {
+        yield return new WaitForSeconds(.3f);
+        inpactoPiedra.Play();
+    }
 }
