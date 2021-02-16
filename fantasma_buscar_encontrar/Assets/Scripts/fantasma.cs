@@ -60,9 +60,11 @@ public class fantasma : MonoBehaviour
         if (collision.transform.CompareTag("trampa") && collision.gameObject.GetComponent<trampa>().impactoConPiedra == false || collision.transform.CompareTag("trampaUp") && collision.gameObject.GetComponent<trampa>().impactoConPiedra == false || collision.transform.CompareTag("trampaDown") && collision.gameObject.GetComponent<trampa>().impactoConPiedra == false)
         {
             anim.SetTrigger("dead");
+            Pinput.velocidadMovimiento = 0;
         }
         if (collision.transform.CompareTag("vacio")) {
             anim.SetTrigger("fall");
+            Pinput.velocidadMovimiento = 0;
         }
     }
 

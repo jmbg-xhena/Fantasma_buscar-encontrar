@@ -33,6 +33,7 @@ public class espectro : MonoBehaviour
         }
         if (collision.transform.CompareTag("Aron"))
         {
+            collision.gameObject.GetComponent<fantasma>().Pinput.velocidadMovimiento = 0;
             chocando = true;
             gameObject.GetComponent<Animator>().SetBool("Consuming", true);
             collision.gameObject.GetComponent<Animator>().SetTrigger("dead");

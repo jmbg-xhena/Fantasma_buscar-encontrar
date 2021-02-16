@@ -221,7 +221,7 @@ MonoBehaviour:
   t: 0
   chocando: 0
   xScale: 0
-  velocidad: 10
+  velocidad: 2
   muerte: {fileID: 8300000, guid: 86d2ecda9eb687a4da748c0aeb89aafd, type: 3}
   ataque: {fileID: 8300000, guid: f9294c7ce370ad14897ee8b239fa0dbb, type: 3}
 --- !u!50 &3028280131291451364

@@ -64,6 +64,7 @@ public class humano : MonoBehaviour
             if (stick == false)
             {
                 anim.SetTrigger("dead");
+                Pinput.velocidadMovimiento = 0;
             }
             else {
                Collider2D[] cols = collision.gameObject.transform.parent.gameObject.GetComponentsInChildren<Collider2D>();
@@ -76,11 +77,13 @@ public class humano : MonoBehaviour
         if (collision.transform.CompareTag("vacio"))
         {
             anim.SetTrigger("fall");
+            Pinput.velocidadMovimiento = 0;
         }
 
         if (collision.transform.CompareTag("lobo"))
         {
             print("humano game over");
+            Pinput.velocidadMovimiento = 0;
         }
     }
 

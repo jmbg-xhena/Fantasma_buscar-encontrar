@@ -89,6 +89,7 @@ public class LoboStatus : MonoBehaviour
             chocando = true;
             gameObject.GetComponent<Animator>().SetBool("Attacking", true);
             collision.gameObject.GetComponent<Animator>().SetTrigger("dead");
+            collision.gameObject.GetComponent<humano>().Pinput.velocidadMovimiento = 0;
             audioLobos.clip = ataque;
             audioLobos.Play();
         }
