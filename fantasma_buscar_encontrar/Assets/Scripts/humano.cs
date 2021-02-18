@@ -14,6 +14,7 @@ public class humano : MonoBehaviour
     public bool agarrarObjeto = false;
 
 
+
     public AudioSource aud;
     public AudioClip[] hierba;
     public AudioClip[] camino;

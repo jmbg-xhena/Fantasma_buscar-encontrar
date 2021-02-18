@@ -13,7 +13,7 @@ public class PlayerInput : MonoBehaviour
     public InputAction Input_accionP1;
     public InputAction Input_interaccionP1;
     public InputAction PauseButton;
-    private bool CanAccionP1;
+    public bool CanAccionP1;
     public Vector3 moveValuesP1;
     public InputAction Input_moveP2;
     public InputAction Input_accionP2;
@@ -283,13 +283,13 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
-    void PauseGame()
+    public void PauseGame()
     {
         Time.timeScale = 0;
         paused = true;
     }
 
-    void ResumeGame()
+    public void ResumeGame()
     {
         Time.timeScale = 1;
         paused = false;
