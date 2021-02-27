@@ -5,21 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class scene_manager : MonoBehaviour
 {
-    private bool aron_llego=false;
-    private bool amelia_llego=false;
+    private bool aron_llego = false;
+    private bool amelia_llego = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
         if (aron_llego && amelia_llego) {
-            nextScene();
+            NextScene();
         }
 
     }
@@ -36,10 +36,10 @@ public class scene_manager : MonoBehaviour
         }
     }
 
-    public void nextScene() {
+    public void NextScene() {
         if (SceneManager.GetActiveScene().buildIndex + 1 == 4)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3 );
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
 
         }
         else
@@ -48,8 +48,13 @@ public class scene_manager : MonoBehaviour
 
         }
     }
-    public void nextSceneCredits(string sceneName)
+    public void NextSceneChoice(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
     }
 }
