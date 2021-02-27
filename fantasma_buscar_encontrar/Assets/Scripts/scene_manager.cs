@@ -8,6 +8,7 @@ public class scene_manager : MonoBehaviour
     private bool aron_llego=false;
     private bool amelia_llego=false;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,5 +47,9 @@ public class scene_manager : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
         }
+    }
+    public void nextSceneCredits(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }
